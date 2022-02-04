@@ -6,16 +6,28 @@ public class User {
     private int id;
     private String f_name;
     private String l_name;
-    private Type UserRole;
+    private UserRole UserRole;
     private String email;
     private String password;
 
-    public User(String f_name, String l_name, Type user_Role, String email, String password) {
+    public User(String f_name, String l_name, UserRole userRole, String email, String password) {
         this.f_name = f_name;
         this.l_name = l_name;
-        UserRole = user_Role;
+        UserRole = userRole;
         this.email = email;
         this.password = password;
+    }
+
+    public User() {
+
+    }
+
+    public com.revature.models.UserRole getUserRole() {
+        return UserRole;
+    }
+
+    public void setUserRole(com.revature.models.UserRole userRole) {
+        UserRole = userRole;
     }
 
     @Override
@@ -54,13 +66,6 @@ public class User {
         this.l_name = l_name;
     }
 
-    public Type getUserRole() {
-        return UserRole;
-    }
-
-    public void setUserRole(Type userRole) {
-        UserRole = userRole;
-    }
 
     public String getEmail() {
         return email;

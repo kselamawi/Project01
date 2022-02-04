@@ -10,7 +10,7 @@ public interface UserDao {
     //Create a Reimbursement
     public boolean createUser(User user);
     //Delete a Reimbursement
-    public boolean deleteUser(User user);
+    public boolean deleteUser(int id);
     //Update a Reimbursement
     public boolean updateUser(User user);
     //Get all reimbursements
