@@ -1,13 +1,0 @@
-
-k	java:S116"QRename this field "f_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïï³œùÿÿÿÿ
-e	java:S116"QRename this field "l_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜Îä?
-o	java:S116	"SRename this field "UserRole" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦“Í8…İ ³ì/
-o	java:S100)"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼¾Ü„üÿÿÿÿ8ø­÷°ì/
-j	java:S100-"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œåØà8ø­÷°ì/
-o	java:S1001"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡Åœ‹üÿÿÿÿ8ù­÷°ì/
-j	java:S1005"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ï«á§8ù­÷°ì/
-r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—ù•ÿÿÿÿÿ8Ğ¯ö°ì/
-r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—ù•ÿÿÿÿÿ8Ğ¯ö°ì/
-r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—ù•ÿÿÿÿÿ8Ğ¯ö°ì/
-m	java:S117-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œåØà8ü­÷°ì/
-m	java:S1175"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ï«á§8ü­÷°ì/
