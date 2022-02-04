@@ -6,14 +6,14 @@ public class User {
     private int id;
     private String f_name;
     private String l_name;
-    private Type User_Role;
+    private Type UserRole;
     private String email;
     private String password;
 
     public User(String f_name, String l_name, Type user_Role, String email, String password) {
         this.f_name = f_name;
         this.l_name = l_name;
-        User_Role = user_Role;
+        UserRole = user_Role;
         this.email = email;
         this.password = password;
     }
@@ -24,7 +24,7 @@ public class User {
                 "id=" + id +
                 ", f_name='" + f_name + '\'' +
                 ", l_name='" + l_name + '\'' +
-                ", User_Role=" + User_Role +
+                ", User_Role=" + UserRole +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 '}';
@@ -54,12 +54,12 @@ public class User {
         this.l_name = l_name;
     }
 
-    public Type getUser_Role() {
-        return User_Role;
+    public Type getUserRole() {
+        return UserRole;
     }
 
-    public void setUser_Role(Type user_Role) {
-        User_Role = user_Role;
+    public void setUserRole(Type userRole) {
+        UserRole = userRole;
     }
 
     public String getEmail() {
