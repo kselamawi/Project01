@@ -5,12 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf7ca802-6ba2-4930-9613-0d08411c8f29" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/1/8163c4788922234e5e1d515293096577225c4471" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/f/fff6efe38be8224006013f88454fc3e0dd198250" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/ReimbursementDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/ReimbursementDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/models/Reimbursement.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/models/Reimbursement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/util/LoggingUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/util/LoggingUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/dao/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/dao/UserDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/util/ConUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/util/ConUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/newProject01/AppTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +31,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="JUnit3 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -49,7 +55,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit3" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3" value="junit.framework.TestCase" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="junit.framework.TestCase" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.revature.models" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="ReimbursementDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
