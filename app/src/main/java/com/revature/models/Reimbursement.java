@@ -7,4 +7,7 @@ public class Reimbursement {
     double amount;
     Type Reimbursement_Type;
     Type Reimbursement_Status;
+    User author;
+    User resolver;
+    String description;
 }
