@@ -9,7 +9,7 @@ public interface ReimbursementDao {
     //Create a Reimbursement
      public boolean createReimbursement(Reimbursement reimbursement);
      //Delete a Reimbursement
-     public boolean deleteReimbursement(Reimbursement reimbursement);
+     public boolean deleteReimbursement(int id);
      //Update a Reimbursement
      public boolean updateReimbursement(Reimbursement reimbursement);
      //Get all reimbursements
