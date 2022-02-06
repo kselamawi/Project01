@@ -5,22 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf7ca802-6ba2-4930-9613-0d08411c8f29" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/1/8163c4788922234e5e1d515293096577225c4471" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/f/fff6efe38be8224006013f88454fc3e0dd198250" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/0/909e8eed50690cb1723178bf35564ef65db291b9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/3/c30fddb0439f58ca7b412c2eda9ea7d84858f8d8" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/ReimbursementDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/ReimbursementDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/dao/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/dao/UserDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/dao/ReimbursementDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/dao/ReimbursementDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/dao/ReimbursementDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/dao/ReimbursementDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/models/Reimbursement.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/models/Reimbursement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/models/ReimbursementStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/models/ReimbursementStatus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/util/ConUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/util/ConUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/newProject01/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/service/ReimbursementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/service/ReimbursementService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/service/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
