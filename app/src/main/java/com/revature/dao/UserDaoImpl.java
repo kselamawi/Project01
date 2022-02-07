@@ -4,7 +4,6 @@ import com.revature.models.User;
 import com.revature.models.UserRole;
 import com.revature.util.ConUtil;
 
-import java.lang.reflect.Type;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -125,6 +124,34 @@ public class UserDaoImpl implements UserDao{
 
     @Override
     public User getUserById(int id) {
+        return null;
+    }
+
+    @Override
+     // -----login verification
+     public User verifyLogin(String email, String password) {
+        String sql  ="select * from users where email ='?' and password='?'";
+        try( Connection con =ConUtil.getConnection()) {
+            PreparedStatement ps = con.prepareCall(sql);
+            ps.setString(1,email);
+            ps.setString(2,password);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                System.out.println("You are login");
+                User user = new User();
+                user.setId(rs.getInt("id"));
+                user.setEmail(rs.getString("email"));
+                user.setPassword(rs.getString("password"));
+                user.setF_name(rs.getString("f_name"));
+                user.setL_name(rs.getString("l_name"));
+                int typeOrdinal = rs.getInt("user_role");
+                UserRole[] types = UserRole.values();
+                user.setUserRole(types[typeOrdinal]);
+                return user;
+            }
+        } catch( SQLException e){
+           e.printStackTrace();
+            }
         return null;
     }
 }

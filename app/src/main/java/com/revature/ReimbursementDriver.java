@@ -5,17 +5,14 @@ import com.revature.dao.ReimbursementDaoImpl;
 import com.revature.dao.UserDao;
 import com.revature.dao.UserDaoImpl;
 import com.revature.models.Reimbursement;
-import com.revature.models.User;
-import com.revature.models.UserRole;
 import io.javalin.Javalin;
-
-import java.util.List;
 
 public class ReimbursementDriver {
 
 
     public static void main(String[] args) {
-        Javalin app = Javalin.create().start(8090);
+        Javalin app = Javalin.create().start(8097);
+        app.set(8080);
 
 
         ReimbursementDao reimbursementDao = new ReimbursementDaoImpl();
@@ -29,11 +26,11 @@ public class ReimbursementDriver {
 //        userDao.deleteUser(2);
 
         //Testing Updating user.
-        List<User> userList = userDao.getAllUsers();
-        System.out.println(userList);
-        User testUser = new User("Selamawi", "Kahsai", UserRole.MANAGER, "selamawi.kahsai@email.com", "password");
-        testUser.setId(3);
-        userDao.updateUser(testUser);
+//        List<User> userList = userDao.getAllUsers();
+//        System.out.println(userList);
+//        User testUser = new User("Selamawi", "Kahsai", UserRole.MANAGER, "selamawi.kahsai@email.com", "password");
+//        testUser.setId(3);
+//        userDao.updateUser(testUser);
 
         //testing creating reimbursement
     //    Reimbursement r = new Reimbursement(40, ReimbursementType.LODGING, testUser);
@@ -50,12 +47,16 @@ public class ReimbursementDriver {
         reimbursementDao.updateReimbursement(r);
       */
         //testing getting all reimbursements
-        List<Reimbursement> list = reimbursementDao.getAllReimbursements();
-        System.out.println(list);
+      /*  List<Reimbursement> list = reimbursementDao.getAllReimbursements();
+        System.out.println(list);*/
 
         //tesing getting reimbursement by Id
         Reimbursement reim = reimbursementDao.getReimbursementById(2);
         System.out.println(reim);
+
+        // --Login test
+//        User us = userDao.verifyLogin("selamawi.kahsai@gmail.com", "password");
+//        System.out.println(us);
     }
 
 }
