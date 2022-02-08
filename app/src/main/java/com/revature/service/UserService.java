@@ -7,17 +7,23 @@ import com.revature.models.User;
 import java.util.List;
 
 public class UserService {
+    private UserDao userDao = new UserDaoImpl();
+
+
     // ---verifying login
-    public User verifyLogin( String email, String password){
-      User user  =new User();
-        return  user;
+    public boolean verifyLogin(String email, String password){
+        User user = userDao.getUserByEmailAndPassword(email, password);
+        if(user != null){
+            return true;
+        }
+        return false;
     }
 
-    private UserDao userDao = new UserDaoImpl();
+    
+
 
     //----Create a User
     public boolean createUser(User user){
-
         return userDao.createUser(user);
     }
     //----Delete a User
