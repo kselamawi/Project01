@@ -4,33 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf7ca802-6ba2-4930-9613-0d08411c8f29" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Project0/project0-template/.idea/sonarlint/issuestore/e/4/e4fa11acbf8f0982fb03100b7a89af4e52f84dc2" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project0/project0-template/.idea/sonarlint/issuestore/e/4/e4fa11acbf8f0982fb03100b7a89af4e52f84dc2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Project0/project0-template/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project0/project0-template/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Project0/project0-template/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project0/project0-template/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Project0/project0-template/src/main/java/com/revature/BankDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project0/project0-template/src/main/java/com/revature/BankDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Project0/project0-template/src/main/java/com/revature/JavalinApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project0/project0-template/src/main/java/com/revature/JavalinApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Project0/project0-template/src/main/java/com/revature/daos/AccountDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project0/project0-template/src/main/java/com/revature/daos/AccountDaoImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Project0/project0-template/src/main/java/com/revature/services/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project0/project0-template/src/main/java/com/revature/services/AccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/5/05efc8b1657769a27696d478ded1e95f38737233" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/d/4dc2d9d52b482177579b3723417e4e2ac3f76ccb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="bf7ca802-6ba2-4930-9613-0d08411c8f29" name="Changes" comment="n">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/ReimbursementDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/ReimbursementDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/dao/ReimbursementDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/dao/ReimbursementDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/dao/ReimbursementDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/dao/ReimbursementDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/dao/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/dao/UserDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/models/Reimbursement.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/models/Reimbursement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/service/ReimbursementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/service/ReimbursementService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/util/ConUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/util/ConUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/util/LoggingUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/util/LoggingUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/revature/models/UserTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -241,5 +216,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="n" />
+    <option name="LAST_COMMIT_MESSAGE" value="n" />
   </component>
 </project>
