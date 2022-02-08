@@ -1,9 +1,7 @@
 package com.revature.models;
 
-import java.lang.reflect.Type;
-
 public class User {
-    private int id;
+    private Integer id;
     private String f_name;
     private String l_name;
     private UserRole UserRole;
@@ -22,11 +20,11 @@ public class User {
 
     }
 
-    public com.revature.models.UserRole getUserRole() {
+    public UserRole getUserRole() {
         return UserRole;
     }
 
-    public void setUserRole(com.revature.models.UserRole userRole) {
+    public void setUserRole(UserRole userRole) {
         UserRole = userRole;
     }
 
@@ -46,7 +44,7 @@ public class User {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

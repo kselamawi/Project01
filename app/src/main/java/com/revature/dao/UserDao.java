@@ -1,6 +1,5 @@
 package com.revature.dao;
 
-import com.revature.models.Reimbursement;
 import com.revature.models.User;
 
 import java.util.List;
@@ -17,5 +16,6 @@ public interface UserDao {
     public List<User> getAllUsers();
     //Get a reimbursement by ID.
     public User getUserById(int id);
+    public User verifyLogin( String email, String password);
 
 }
