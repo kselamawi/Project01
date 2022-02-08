@@ -1,14 +1,28 @@
 package com.revature.util;
 
 
-//import com.sun.org.slf4j.internal.Logger;
-//import com.sun.org.slf4j.internal.LoggerFactory;
-//import io.javalin.http.Context;
-//
-//public class LoggingUtil {
-//    private static Logger logger = LoggerFactory.getLogger(LoggingUtil.class);
-//
-//    public LoggingUtil() {
-//    }
-//
-//}
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.Date;
+
+public class LoggingUtil {
+    private Date date = new Date();
+    private static Logger logger = LoggerFactory.getLogger(LoggingUtil.class);
+
+    public void logConnection() { logger.info("Database connection at " + date);}
+
+    public LoggingUtil() {
+    }
+
+    public void logSuccessfulQuery(String query){logger.info(query + "was successful");}
+
+    public void logger(String info){
+        logger.info(info);
+    }
+
+    public void queryLogger(String query){
+        logger.info(query + " was just attempted");
+    }
+
+}

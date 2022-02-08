@@ -1,10 +1,14 @@
 package com.revature.models;
 
+import java.sql.Timestamp;
+
 public class Reimbursement {
     Integer id;
     double amount;
     ReimbursementType reimbursementType;
     ReimbursementStatus reimbursementStatus;
+    Timestamp time_submitted;
+    Timestamp time_resolved;
     User author;
     User resolver;
     String description;
@@ -26,6 +30,22 @@ public class Reimbursement {
         this.author = author;
         this.resolver = resolver;
         this.description = description;
+    }
+
+    public Timestamp getTime_submitted() {
+        return time_submitted;
+    }
+
+    public void setTime_submitted(Timestamp time_submitted) {
+        this.time_submitted = time_submitted;
+    }
+
+    public Timestamp getTime_resolved() {
+        return time_resolved;
+    }
+
+    public void setTime_resolved(Timestamp time_resolved) {
+        this.time_resolved = time_resolved;
     }
 
     public int getId() {
