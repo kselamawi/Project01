@@ -365,8 +365,8 @@ public class ReimbursementDaoImpl implements  ReimbursementDao {
                     UserRole[] uR = UserRole.values();
                     u.setUserRole(uR[typeOrdinalU]);
                     u.setEmail(rs.getString(20));
-                    u.setF_name(rs.getString(19));
-                    u.setL_name(rs.getString(18));
+                    u.setF_name(rs.getString(18));
+                    u.setL_name(rs.getString(19));
                     u.setPassword(rs.getString(17));
                     reim.setResolver(u);
                 }
