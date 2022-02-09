@@ -19,35 +19,25 @@ repositories {
 dependencies {
 
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.12.4'
-
-
+    implementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+    implementation 'org.junit.jupiter:junit-jupiter:5.8.1'
 // https://mvnrepository.com/artifact/junit/junit
     testImplementation group: 'junit', name: 'junit', version: '4.13.1'
-
-
 // https://mvnrepository.com/artifact/org.mockito/mockito-core
     testImplementation group: 'org.mockito', name: 'mockito-core', version: '3.12.4'
-
-
-
     // This dependency is used by the application.
     implementation 'com.google.guava:guava:30.1.1-jre'
-
     // Log4J dependency
     implementation 'org.apache.logging.log4j:log4j-core:2.17.1'
-
     // Javalin
     implementation group: 'io.javalin', name: 'javalin', version: '4.3.0'
-
     //Jackson dependency.
     implementation group: 'org.slf4j', name: 'slf4j-simple', version: '1.8.0-beta4'
-
-
 // https://mvnrepository.com/artifact/org.postgresql/postgresql
     implementation 'org.postgresql:postgresql:42.2.18'
-
-
-
+}
+test{
+    useJUnitPlatform()
 }
 
 application {
