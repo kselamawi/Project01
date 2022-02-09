@@ -9,30 +9,30 @@ import org.mockito.MockitoAnnotations;
 import static org.junit.Assert.assertEquals;
 
 public class ReimbursementServiceTest {
-//    @Mock
-//    ReimbursementService reimbursementService = new ReimbursementService();
-//
-//    User employee;
-//    User manager;
-//    Reimbursement reimbursement;
-//
-//    @Before
-//    public void testObjects(){
-//        MockitoAnnotations.openMocks(this);
-//        employee = new User(1, "isaiah", "payne", UserRole.EMPLOYEE, "isaiah.payne@email.com","passWord");
-//        manager = new User(2, "selamawi", "kahsai", UserRole.MANAGER, "selamawi.kahsai@email.com", "wordPass");
-//        reimbursement = new Reimbursement(1, 50, ReimbursementType.FOOD, ReimbursementStatus.PENDING, employee, manager, "Had to buy food during meeting");
-//    }
-//
-//    @Test
-//    public void approveReimbursementStatus() {
-//
-//        reimbursementService.changeReimbursementStatus(1, 2, true);
-//
-//        assertEquals(ReimbursementStatus.APPROVED, reimbursement.getReimbursementStatus());
-//
-//
-//    }
+    @Mock
+    ReimbursementService reimbursementService = new ReimbursementService();
+
+    User employee;
+    User manager;
+    Reimbursement reimbursement;
+
+    @Before
+    public void testObjects(){
+        MockitoAnnotations.openMocks(this);
+        employee = new User(1, "isaiah", "payne", UserRole.EMPLOYEE, "isaiah.payne@email.com","passWord");
+        manager = new User(2, "selamawi", "kahsai", UserRole.MANAGER, "selamawi.kahsai@email.com", "wordPass");
+        reimbursement = new Reimbursement(1, 50, ReimbursementType.FOOD, ReimbursementStatus.PENDING, employee, manager, "Had to buy food during meeting");
+    }
+
+    @Test
+    public void approveReimbursementStatus() {
+
+        reimbursementService.changeReimbursementStatus(1, 2, true);
+
+        assertEquals(ReimbursementStatus.APPROVED, reimbursement.getReimbursementStatus());
+
+
+    }
 
 
 
