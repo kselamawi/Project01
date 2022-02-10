@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf7ca802-6ba2-4930-9613-0d08411c8f29" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Project0/project0-template/.idea/sonarlint/issuestore/e/4/e4fa11acbf8f0982fb03100b7a89af4e52f84dc2" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project0/project0-template/.idea/sonarlint/issuestore/e/4/e4fa11acbf8f0982fb03100b7a89af4e52f84dc2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Project0/project0-template/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project0/project0-template/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Project0/project0-template/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project0/project0-template/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Project0/project0-template/src/main/java/com/revature/BankDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project0/project0-template/src/main/java/com/revature/BankDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Project0/project0-template/src/main/java/com/revature/JavalinApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project0/project0-template/src/main/java/com/revature/JavalinApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Project0/project0-template/src/main/java/com/revature/daos/AccountDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project0/project0-template/src/main/java/com/revature/daos/AccountDaoImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Project0/project0-template/src/main/java/com/revature/services/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project0/project0-template/src/main/java/com/revature/services/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +67,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.DirectoryMappings" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
