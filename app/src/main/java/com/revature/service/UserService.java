@@ -42,6 +42,11 @@ public class UserService {
         return userDao.getUserById(id);
     }
 
+    //check if user exists
+    //public boolean doesUserExist(User u){
+
+    //}
+
     //----Update user
     public boolean updateUser(User user) {
 

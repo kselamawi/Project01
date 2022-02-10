@@ -72,6 +72,7 @@ public class ReimbursementService {
     }
     //Get all reimbursements
     public List<Reimbursement> getAllReimbursements(){
+
         return reimbursementDao.getAllReimbursements();
     }
     //Get a reimbursement by ID.
