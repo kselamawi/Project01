@@ -19,12 +19,23 @@ public class JavalinApp {
                 put(userController::handleUpdateUserById);
                 path("/reimbursements", () -> {
                     get(reimbursementController::handleGetReimbursementsByAuthor);
+                    path("/pending", () ->{
+                        get(reimbursementController::handleGetAllPendingByUserID);
+                    });
+                    path("/resolved", () ->{
+                        get(reimbursementController::handleGetResolvedByUserID );
+                    });
                 });
-            });
-
-        });
+            });});
         path("/reimbursements", () -> {
             get(reimbursementController::handleGetAllReimbursements);
+            path("/pending", () -> {
+                get(reimbursementController::handleGetAllReimbursementPending);
+            });
+            path("/resolved", () -> {
+                get(reimbursementController::handleGetAllResolvedReimbursement);
+            });
+
             path("/{id}", () -> {
                 get(reimbursementController::handleGetReimbursementsById);
                 path("/approve", () -> {
@@ -33,8 +44,8 @@ public class JavalinApp {
                 path("/deny", () -> {
                     put(reimbursementController::handleDenyReimbursement);
                 });
-
             });
+
         });
     });
 

@@ -3,6 +3,7 @@ package com.revature.dao;
 import com.revature.models.User;
 import com.revature.models.UserRole;
 import com.revature.util.ConUtil;
+import com.revature.util.LoggingUtil;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -11,6 +12,7 @@ import java.util.List;
 public class UserDaoImpl implements UserDao{
     @Override
     public boolean createUser(User user) {
+        LoggingUtil.logger.info("Create a user");
         String sql = "insert into users (email, password, first_name, last_name, user_role) values (?, ?, ?, ?, ?)";
         try(Connection c = ConUtil.getConnection();
             PreparedStatement ps = c.prepareStatement(sql);
