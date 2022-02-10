@@ -1,9 +1,6 @@
 package com.revature.dao;
 
-import com.revature.models.Reimbursement;
-import com.revature.models.ReimbursementStatus;
-import com.revature.models.ReimbursementType;
-import com.revature.models.User;
+import com.revature.models.*;
 import com.revature.util.ConUtil;
 import com.revature.util.LoggingUtil;
 
@@ -147,7 +144,7 @@ public class ReimbursementDaoImpl implements  ReimbursementDao {
     public List<Reimbursement> getAllReimbursementsByAuthor(int author_id) {
         loggingUtil.queryLogger("get All Reimbursements By ID");
 
-        String sql = "select * from users u right join reimbursement r on u.id = r.reimb_author where u.id = ?";
+        String sql = "select * from users u inner join reimbursement r on r.reimb_author = u.id inner join users u2 on r.reimb_resolver = u2.id where u.id = ?";
 
         Connection c = null;
         try {
@@ -164,14 +161,31 @@ public class ReimbursementDaoImpl implements  ReimbursementDao {
                 ReimbursementType[] types = ReimbursementType.values();
                 ReimbursementStatus[] types2 = ReimbursementStatus.values();
 
-                reimbursement.setId(rs.getInt("id"));
+                reimbursement.setId(rs.getInt(7));
                 reimbursement.setReimbursementType(types[typeOrdinal]);
-                User u = new User();
-                u.setId(rs.getInt("reimb_resolver"));
-                reimbursement.setResolver(u);
+                if(rs.getInt(16)!=0) {
+                    User u = new User();
+                    u.setId(rs.getInt(16));
+
+                    int typeOrdinalU = rs.getInt(21);
+                    UserRole[] uR = UserRole.values();
+                    u.setUserRole(uR[typeOrdinalU]);
+                    u.setEmail(rs.getString(20));
+                    u.setF_name(rs.getString(18));
+                    u.setL_name(rs.getString(19));
+                    u.setPassword(rs.getString(17));
+                    reimbursement.setResolver(u);
+                }
                 reimbursement.setReimbursementStatus(types2[typeOrdinal2]);
                 User u2 = new User();
-                u.setId(rs.getInt("reimb_author"));
+                int typeOrdinalU2 = rs.getInt("user_role");
+                UserRole[] uR2 = UserRole.values();
+                u2.setUserRole(uR2[typeOrdinalU2]);
+                u2.setEmail(rs.getString("email"));
+                u2.setF_name(rs.getString("first_name"));
+                u2.setL_name(rs.getString("last_name"));
+                u2.setPassword(rs.getString("password"));
+                u2.setId(rs.getInt("reimb_author"));
                 reimbursement.setAuthor(u2);
                 reimbursement.setAmount(rs.getDouble("reimb_amount"));
                 reimbursement.setDescription(rs.getString("description"));
@@ -262,7 +276,7 @@ public class ReimbursementDaoImpl implements  ReimbursementDao {
     public List<Reimbursement> getAllReimbursements() {
         loggingUtil.queryLogger("get All Reimbursement");
 
-        String sql = "select * from reimbursement";
+        String sql = "select * from users u inner join reimbursement r on r.reimb_author = u.id inner join users u2 on r.reimb_resolver = u2.id where u.id = ?";
 
         Connection c = null;
         try {
@@ -278,14 +292,34 @@ public class ReimbursementDaoImpl implements  ReimbursementDao {
                 ReimbursementType[] types = ReimbursementType.values();
                 ReimbursementStatus[] types2 = ReimbursementStatus.values();
 
-                reimbursement.setId(rs.getInt("id"));
+                reimbursement.setId(rs.getInt(7));
                 reimbursement.setReimbursementType(types[typeOrdinal]);
-                User u = new User();
-                u.setId(rs.getInt("reimb_resolver"));
-                reimbursement.setResolver(u);
+                if(rs.getInt(16)!=0) {
+                    User u = new User();
+                    u.setId(rs.getInt(16));
+
+                    int typeOrdinalU = rs.getInt(21);
+                    UserRole[] uR = UserRole.values();
+                    u.setUserRole(uR[typeOrdinalU]);
+                    u.setEmail(rs.getString(20));
+                    u.setF_name(rs.getString(18));
+                    u.setL_name(rs.getString(19));
+                    u.setPassword(rs.getString(17));
+                    reimbursement.setResolver(u);
+                }
                 reimbursement.setReimbursementStatus(types2[typeOrdinal2]);
+
                 User u2 = new User();
-                u.setId(rs.getInt("reimb_author"));
+                u2.setId(rs.getInt("reimb_author"));
+
+                int typeOrdinalU2 = rs.getInt("user_role");
+                UserRole[] uR2 = UserRole.values();
+                u2.setUserRole(uR2[typeOrdinalU2]);
+                u2.setEmail(rs.getString("email"));
+                u2.setF_name(rs.getString("first_name"));
+                u2.setL_name(rs.getString("last_name"));
+                u2.setPassword(rs.getString("password"));
+
                 reimbursement.setAuthor(u2);
                 reimbursement.setAmount(rs.getDouble("reimb_amount"));
                // reimbursement.setDescription(rs.getString("description"));
@@ -304,7 +338,7 @@ public class ReimbursementDaoImpl implements  ReimbursementDao {
     public Reimbursement getReimbursementById(int id) {
         loggingUtil.queryLogger("get by ID Reimbursement");
 
-        String sql = "select * from reimbursement where id = ?";
+        String sql = "select * from users u inner join reimbursement r on r.reimb_author = u.id inner join users u2 on r.reimb_resolver = u2.id where u.id = ?";
         Reimbursement reim = new Reimbursement();
 
         try(Connection c = ConUtil.getConnection();
@@ -312,27 +346,43 @@ public class ReimbursementDaoImpl implements  ReimbursementDao {
         ) {
             ps.setInt(1, id);
             ResultSet rs = ps.executeQuery();
-
+            System.out.println(rs);
             if(rs.next()){
                 int typeOrdinal = rs.getInt("reimb_type");
                 int typeOrdinal2 = rs.getInt("reimb_status_id");
                 ReimbursementType[] types = ReimbursementType.values();
                 ReimbursementStatus[] types2 = ReimbursementStatus.values();
 
-                reim.setId(rs.getInt("id"));
+                reim.setId(rs.getInt(7));
                 reim.setReimbursementType(types[typeOrdinal]);
                 User u = new User();
-                if(rs.getInt("reimb_resolver")==0){
+
+                if(rs.getInt(16)==0){
                     u.setId(null);
                 } else {
-                    u.setId(rs.getInt("reimb_resolver"));
+                    u.setId(rs.getInt(16));
+                    int typeOrdinalU = rs.getInt(21);
+                    UserRole[] uR = UserRole.values();
+                    u.setUserRole(uR[typeOrdinalU]);
+                    u.setEmail(rs.getString(20));
+                    u.setF_name(rs.getString(18));
+                    u.setL_name(rs.getString(19));
+                    u.setPassword(rs.getString(17));
+                    reim.setResolver(u);
                 }
 
-                reim.setResolver(u);
                 reim.setReimbursementStatus(types2[typeOrdinal2]);
                 User u2 = new User();
 
-                u.setId(rs.getInt("reimb_author"));
+                u2.setId(rs.getInt("reimb_author"));
+
+                int typeOrdinalU2 = rs.getInt("user_role");
+                UserRole[] uR2 = UserRole.values();
+                u2.setUserRole(uR2[typeOrdinalU2]);
+                u2.setEmail(rs.getString("email"));
+                u2.setF_name(rs.getString("first_name"));
+                u2.setL_name(rs.getString("last_name"));
+                u2.setPassword(rs.getString("password"));
 
                 reim.setAuthor(u2);
                 reim.setAmount(rs.getDouble("reimb_amount"));
@@ -348,7 +398,7 @@ public class ReimbursementDaoImpl implements  ReimbursementDao {
     //We're going to get all reimbursements by author id, then filter by pending
     public List<Reimbursement> getAllPendingReimbursementsByAuthor(int author_id) {
         loggingUtil.queryLogger("get All Pending Reimbursements by Author ID");
-        String sql = "select * from users u right join reimbursement r on u.id = r.reimb_author where u.id = ? and r.reimb_status_id = 0";
+        String sql = "select * from users u inner join reimbursement r on r.reimb_author = u.id inner join users u2 on r.reimb_resolver = u2.id where u.id = ? and where r.reimb_status_id = 0";
         Connection c = null;
         try {
             c = ConUtil.getConnection();
@@ -364,10 +414,10 @@ public class ReimbursementDaoImpl implements  ReimbursementDao {
                 ReimbursementType[] types = ReimbursementType.values();
                 ReimbursementStatus[] types2 = ReimbursementStatus.values();
 
-                reimbursement.setId(rs.getInt("id"));
+                reimbursement.setId(rs.getInt(7));
                 reimbursement.setReimbursementType(types[typeOrdinal]);
                 User u = new User();
-                u.setId(rs.getInt("reimb_resolver"));
+                u.setId(rs.getInt(16));
                 reimbursement.setResolver(u);
                 reimbursement.setReimbursementStatus(types2[typeOrdinal2]);
                 User u2 = new User();
@@ -389,7 +439,7 @@ public class ReimbursementDaoImpl implements  ReimbursementDao {
     @Override
     public List<Reimbursement> getAllResolvedReimbursementsByAuthor(int author_id) {
         loggingUtil.queryLogger("get All Pending Reimbursements by Author ID");
-        String sql = "select * from users u right join reimbursement r on u.id = r.reimb_author where u.id = ? and r.reimb_status_id != 0";
+        String sql = "select * from users u inner join reimbursement r on r.reimb_author = u.id inner join users u2 on r.reimb_resolver = u2.id where u.id = ? and where r.reimb_status_id != 0";
         Connection c = null;
         try {
             c = ConUtil.getConnection();
@@ -405,14 +455,14 @@ public class ReimbursementDaoImpl implements  ReimbursementDao {
                 ReimbursementType[] types = ReimbursementType.values();
                 ReimbursementStatus[] types2 = ReimbursementStatus.values();
 
-                reimbursement.setId(rs.getInt("id"));
+                reimbursement.setId(rs.getInt(7));
                 reimbursement.setReimbursementType(types[typeOrdinal]);
                 User u = new User();
-                u.setId(rs.getInt("reimb_resolver"));
+                u.setId(rs.getInt(16));
                 reimbursement.setResolver(u);
                 reimbursement.setReimbursementStatus(types2[typeOrdinal2]);
                 User u2 = new User();
-                u.setId(rs.getInt("reimb_author"));
+                u2.setId(rs.getInt("reimb_author"));
                 reimbursement.setAuthor(u2);
                 reimbursement.setAmount(rs.getDouble("reimb_amount"));
                 reimbursement.setDescription(rs.getString("description"));
