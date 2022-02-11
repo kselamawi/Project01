@@ -1,28 +1,16 @@
 package com.revature.util;
+// Import log4j classes.
 
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.log4j.Logger;
 
 import java.util.Date;
 
 public class LoggingUtil {
+
     private Date date = new Date();
-    private static Logger logger = LoggerFactory.getLogger(LoggingUtil.class);
 
-    public void logConnection() { logger.info("Database connection at " + date);}
+    public static Logger logger = Logger.getLogger(LoggingUtil.class);
+    Logger root = Logger.getRootLogger();
 
-    public LoggingUtil() {
-    }
-
-    public void logSuccessfulQuery(String query){logger.info(query + "was successful");}
-
-    public void logger(String info){
-        logger.info(info);
-    }
-
-    public void queryLogger(String query){
-        logger.info(query + " was just attempted");
-    }
 
 }

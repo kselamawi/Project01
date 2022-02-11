@@ -10,11 +10,10 @@ import java.util.List;
 
 public class ReimbursementDaoImpl implements  ReimbursementDao {
 
-    private LoggingUtil loggingUtil = new LoggingUtil();
+
     @Override
     public boolean approveReimbursement(int reimb_id, int resolver_id) {
-        loggingUtil.queryLogger("approveReimbursement");
-
+        LoggingUtil.logger.info("approveReimbursement");
         String sql = "update reimbursement set reimb_status_id = 1, reimb_resolver = ?, reimb_resolved = ? where id = ?";
         try(Connection c = ConUtil.getConnection();
             PreparedStatement ps = c.prepareStatement(sql)){
@@ -25,20 +24,20 @@ public class ReimbursementDaoImpl implements  ReimbursementDao {
 
             int alteredRows = ps.executeUpdate();
             if(alteredRows == 1){
-                loggingUtil.logSuccessfulQuery("approve Reimbursement");
+                LoggingUtil.logger.info("Reimbursement was approved successfully");
 
                 return true;
             }
         } catch(SQLException e){
             e.printStackTrace();
         }
-        loggingUtil.logger("Not successful");
+        LoggingUtil.logger.warn("Reimbursement approve wasn't successfully");
         return false;
     }
 
     @Override
     public boolean denyReimbursement(int reimb_id, int resolver_id) {
-        loggingUtil.queryLogger("denyReimbursement");
+        LoggingUtil.logger.info("denyReimbursement");
 
         String sql = "update reimbursement set reimb_status_id = 2, reimb_resolver = ?, reimb_resolved = ? where id = ?";
         try(Connection c = ConUtil.getConnection();
@@ -50,20 +49,20 @@ public class ReimbursementDaoImpl implements  ReimbursementDao {
 
             int alteredRows = ps.executeUpdate();
             if(alteredRows == 1){
-                loggingUtil.logSuccessfulQuery("deny Reimbursement");
+                LoggingUtil.logger.info("Reimbursement deny  was successful ");
 
                 return true;
             }
         } catch(SQLException e){
             e.printStackTrace();
         }
-        loggingUtil.logger("Not successful");
+        LoggingUtil.logger.warn("Reimbursement deny wasn't successful ");
         return false;
     }
 
     @Override
     public List<Reimbursement> getAllPendingReimbursements() {
-        loggingUtil.queryLogger("get All Pending Reimbursements");
+        LoggingUtil.logger.info("get All Pending Reimbursements");
         String sql = "select * from reimbursement where reimb_status_id = 0";
         Connection c = null;
         try {
@@ -81,16 +80,19 @@ public class ReimbursementDaoImpl implements  ReimbursementDao {
 
                 reimbursement.setId(rs.getInt("id"));
                 reimbursement.setReimbursementType(types[typeOrdinal]);
-                User u = new User();
-                u.setId(rs.getInt("reimb_resolver"));
+               if( rs.getInt(5)!=0) {
+                    User u = new User();
+                    u.setId(rs.getInt("reimb_resolver"));
                 reimbursement.setResolver(u);
+                   LoggingUtil.logger.info("Getting all pending Reimbursement was successful ");
+                }
+
                 reimbursement.setReimbursementStatus(types2[typeOrdinal2]);
                 User u2 = new User();
-                u.setId(rs.getInt("reimb_author"));
+                u2.setId(rs.getInt("reimb_author"));
                 reimbursement.setAuthor(u2);
                 reimbursement.setAmount(rs.getDouble("reimb_amount"));
                 // reimbursement.setDescription(rs.getString("description"));
-
                 reimbursementList.add(reimbursement);
             }
             return reimbursementList;
@@ -98,12 +100,13 @@ public class ReimbursementDaoImpl implements  ReimbursementDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        LoggingUtil.logger.warn("Getting all pending Reimbursement wasn't successful ");
         return null;
     }
 
     @Override
     public List<Reimbursement> getAllResolvedReimbursements() {
-        loggingUtil.queryLogger("get All Resolved Reimbursements");
+        LoggingUtil.logger.info("get All Resolved Reimbursements");
         String sql = "select * from reimbursement where reimb_status_id = 1 or reimb_status_id = 2";
         try {
             Connection c = ConUtil.getConnection();
@@ -120,12 +123,15 @@ public class ReimbursementDaoImpl implements  ReimbursementDao {
 
                 reimbursement.setId(rs.getInt("id"));
                 reimbursement.setReimbursementType(types[typeOrdinal]);
-                User u = new User();
-                u.setId(rs.getInt("reimb_resolver"));
-                reimbursement.setResolver(u);
+                if(rs.getInt("reimb_resolver") !=0) {
+                    User u = new User();
+                    u.setId(rs.getInt("reimb_resolver"));
+                    reimbursement.setResolver(u);
+                    LoggingUtil.logger.info("Getting all resolved Reimbursement  was successful ");
+                }
                 reimbursement.setReimbursementStatus(types2[typeOrdinal2]);
                 User u2 = new User();
-                u.setId(rs.getInt("reimb_author"));
+                u2.setId(rs.getInt("reimb_author"));
                 reimbursement.setAuthor(u2);
                 reimbursement.setAmount(rs.getDouble("reimb_amount"));
                 reimbursement.setDescription(rs.getString("description"));
@@ -137,12 +143,13 @@ public class ReimbursementDaoImpl implements  ReimbursementDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        LoggingUtil.logger.warn("Getting all resolved Reimbursement wasn't successful ");
         return null;
     }
 
     @Override
     public List<Reimbursement> getAllReimbursementsByAuthor(int author_id) {
-        loggingUtil.queryLogger("get All Reimbursements By ID");
+        LoggingUtil.logger.info("get All Reimbursements By ID");
 
         String sql = "select * from users u inner join reimbursement r on r.reimb_author = u.id inner join users u2 on r.reimb_resolver = u2.id where u.id = ?";
 
@@ -175,6 +182,7 @@ public class ReimbursementDaoImpl implements  ReimbursementDao {
                     u.setL_name(rs.getString(19));
                     u.setPassword(rs.getString(17));
                     reimbursement.setResolver(u);
+                    LoggingUtil.logger.info("Getting all Reimbursement by author was successful ");
                 }
                 reimbursement.setReimbursementStatus(types2[typeOrdinal2]);
                 User u2 = new User();
@@ -197,12 +205,13 @@ public class ReimbursementDaoImpl implements  ReimbursementDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        LoggingUtil.logger.warn("Getting all Reimbursement by author wasn't successful ");
         return null;
     }
 
     @Override
     public boolean createReimbursement(Reimbursement reimbursement) {
-        loggingUtil.queryLogger("create Reimbursement");
+        LoggingUtil.logger.info("create Reimbursement");
         String sql = "insert into reimbursement (reimb_amount, reimb_type, reimb_author, reimb_submitted) values (?, ?, ?, ?)";
         try(Connection c = ConUtil.getConnection();
             PreparedStatement ps = c.prepareStatement(sql);
@@ -214,19 +223,19 @@ public class ReimbursementDaoImpl implements  ReimbursementDao {
             ps.setTimestamp(4, new Timestamp(System.currentTimeMillis()));
             int alteredRows = ps.executeUpdate();
             if (alteredRows == 1) {
-                loggingUtil.logSuccessfulQuery("create Reimbursement");
+                LoggingUtil.logger.info("Creating Reimbursement was successful ");
                 return true;
             }
         } catch(SQLException e){
             e.printStackTrace();
         }
-        loggingUtil.logger("Create unsuccessful");
+        LoggingUtil.logger.warn("Creating reimbursement  was unsuccessful");
         return false;
     }
 
     @Override
     public boolean deleteReimbursement(int id) {
-        loggingUtil.queryLogger("delete Reimbursement");
+        LoggingUtil.logger.info("delete Reimbursement");
 
         String sql = "delete from reimbursement where id = ?";
 
@@ -237,6 +246,7 @@ public class ReimbursementDaoImpl implements  ReimbursementDao {
             int alteredRows = ps.executeUpdate();
             if(alteredRows == 1){
                 System.out.println("Reimbursement " + id + " was deleted");
+                LoggingUtil.logger.info("Deleting Reimbursement  was successful ");
                 return true;
             }
 
@@ -244,12 +254,13 @@ public class ReimbursementDaoImpl implements  ReimbursementDao {
         } catch (SQLException e){
             e.printStackTrace();
         }
+        LoggingUtil.logger.warn(" Deleting Reimbursement  was unsuccessful ");
         return false;
     }
 
     @Override
     public boolean updateReimbursement(Reimbursement reimbursement) {
-        loggingUtil.queryLogger("update Reimbursement");
+        LoggingUtil.logger.info("update Reimbursement");
 
         String sql = "update reimbursement set reimb_amount = ?, reimb_resolver = ?, reimb_status_id = ? where id = ?";
         try(Connection c = ConUtil.getConnection();
@@ -264,19 +275,22 @@ public class ReimbursementDaoImpl implements  ReimbursementDao {
             int alteredRows = ps.executeUpdate();
             if(alteredRows == 1){
                 System.out.println("Reimbursement " + reimbursement.getId() + " was changed");
+                LoggingUtil.logger.info("Updating Reimbursement  was successful ");
                 return true;
             }
         } catch (SQLException e){
             e.printStackTrace();
         }
+        LoggingUtil.logger.warn("Updating Reimbursement  was unsuccessful ");
         return false;
     }
 
     @Override
     public List<Reimbursement> getAllReimbursements() {
-        loggingUtil.queryLogger("get All Reimbursement");
+        LoggingUtil.logger.info("get All Reimbursement");
 
-        String sql = "select * from users u inner join reimbursement r on r.reimb_author = u.id inner join users u2 on r.reimb_resolver = u2.id where u.id = ?";
+        String sql = "select * from users u inner join reimbursement r on r.reimb_author = u.id inner join users u2 on r.reimb_resolver = u2.id ";
+
 
         Connection c = null;
         try {
@@ -323,22 +337,23 @@ public class ReimbursementDaoImpl implements  ReimbursementDao {
                 reimbursement.setAuthor(u2);
                 reimbursement.setAmount(rs.getDouble("reimb_amount"));
                // reimbursement.setDescription(rs.getString("description"));
-
                 reimbursementList.add(reimbursement);
             }
+            LoggingUtil.logger.info("Getting all Reimbursement was successful ");
             return reimbursementList;
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        LoggingUtil.logger.warn(" Getting Reimbursement was unsuccessful ");
         return null;
     }
 
     @Override
     public Reimbursement getReimbursementById(int id) {
-        loggingUtil.queryLogger("get by ID Reimbursement");
+        LoggingUtil.logger.info("get by ID Reimbursement");
 
-        String sql = "select * from users u inner join reimbursement r on r.reimb_author = u.id inner join users u2 on r.reimb_resolver = u2.id where u.id = ?";
+        String sql = "select * from users u inner join reimbursement r on r.reimb_author = u.id inner join users u2 on r.reimb_resolver = u2.id where r.id = ?";
         Reimbursement reim = new Reimbursement();
 
         try(Connection c = ConUtil.getConnection();
@@ -397,8 +412,8 @@ public class ReimbursementDaoImpl implements  ReimbursementDao {
     @Override
     //We're going to get all reimbursements by author id, then filter by pending
     public List<Reimbursement> getAllPendingReimbursementsByAuthor(int author_id) {
-        loggingUtil.queryLogger("get All Pending Reimbursements by Author ID");
-        String sql = "select * from users u inner join reimbursement r on r.reimb_author = u.id inner join users u2 on r.reimb_resolver = u2.id where u.id = ? and where r.reimb_status_id = 0";
+        LoggingUtil.logger.info("get All Pending Reimbursements by Author ID");
+        String sql = "select * from users u inner join reimbursement r on r.reimb_author = u.id inner join users u2 on r.reimb_resolver = u2.id where u.id = ? and r.reimb_status_id = 0";
         Connection c = null;
         try {
             c = ConUtil.getConnection();
@@ -416,16 +431,17 @@ public class ReimbursementDaoImpl implements  ReimbursementDao {
 
                 reimbursement.setId(rs.getInt(7));
                 reimbursement.setReimbursementType(types[typeOrdinal]);
-                User u = new User();
-                u.setId(rs.getInt(16));
-                reimbursement.setResolver(u);
+                if(rs.getInt("reimb_author")!=0) {
+                    User u = new User();
+                    u.setId(rs.getInt(16));
+                    reimbursement.setResolver(u);
+                }
                 reimbursement.setReimbursementStatus(types2[typeOrdinal2]);
                 User u2 = new User();
-                u.setId(rs.getInt("reimb_author"));
+                u2.setId(rs.getInt("reimb_author"));
                 reimbursement.setAuthor(u2);
                 reimbursement.setAmount(rs.getDouble("reimb_amount"));
                 reimbursement.setDescription(rs.getString("description"));
-
                 reimbursementList.add(reimbursement);
             }
             return reimbursementList;
@@ -438,8 +454,8 @@ public class ReimbursementDaoImpl implements  ReimbursementDao {
 
     @Override
     public List<Reimbursement> getAllResolvedReimbursementsByAuthor(int author_id) {
-        loggingUtil.queryLogger("get All Pending Reimbursements by Author ID");
-        String sql = "select * from users u inner join reimbursement r on r.reimb_author = u.id inner join users u2 on r.reimb_resolver = u2.id where u.id = ? and where r.reimb_status_id != 0";
+        LoggingUtil.logger.info("get All Pending Reimbursements by Author ID");
+        String sql = "select * from users u inner join reimbursement r on r.reimb_author = u.id inner join users u2 on r.reimb_resolver = u2.id where u.id = ? and  r.reimb_status_id != 0";
         Connection c = null;
         try {
             c = ConUtil.getConnection();
