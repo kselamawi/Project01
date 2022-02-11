@@ -20,6 +20,22 @@ public class UserController {
         ctx.json(userList);
     }
 
+    public void handleRegisterUser(Context ctx){
+        String email = ctx.formParam("email");
+        String password = ctx.formParam("password");
+        String firstName = ctx.formParam("firstName");
+        String lastName = ctx.formParam("lastName");
+
+        User user = new User(email, password, firstName, lastName);
+        if(userService.createUser(user)){
+            ctx.result("Your account has been created");
+            ctx.status(200);
+        } else {
+            ctx.result("Your account could not be created");
+            ctx.status(403);
+        }
+    }
+
 
     public void handleGetUserById(Context ctx){
         User u = userService.getUserById(parseInt(ctx.pathParam("id")));
