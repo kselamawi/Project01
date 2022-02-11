@@ -11,12 +11,12 @@ public class UserService {
 
 
     // ---verifying login
-    public boolean verifyLogin(String email, String password){
+    public User getUserByEmailAndPassword(String email, String password){
         User user = userDao.getUserByEmailAndPassword(email, password);
         if(user != null){
-            return true;
+            return user;
         }
-        return false;
+        return null;
     }
 
     

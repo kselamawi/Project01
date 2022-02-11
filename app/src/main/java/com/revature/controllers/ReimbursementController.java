@@ -1,8 +1,10 @@
 package com.revature.controllers;
 
 import com.revature.models.Reimbursement;
+import com.revature.models.ReimbursementType;
 import com.revature.models.User;
 import com.revature.service.ReimbursementService;
+import com.revature.util.LoggingUtil;
 import io.javalin.http.Context;
 
 import java.util.List;
@@ -11,6 +13,25 @@ import static java.lang.Integer.parseInt;
 
 public class ReimbursementController {
     private ReimbursementService reimbursementService = new ReimbursementService();
+
+    public void handleCreateReimbursement(Context ctx){
+        LoggingUtil.logger.info("Attempting to create a reimbursement");
+        double amount = Double.parseDouble(ctx.formParam("Amount"));
+        int author_id = Integer.parseInt(ctx.pathParam("id"));
+        ReimbursementType reimbursementType = ReimbursementType.valueOf(ctx.formParam("ReimbursementType"));
+
+        Reimbursement reimbursement = new Reimbursement(amount, author_id, reimbursementType);
+        if(reimbursementService.createReimbursement(reimbursement)){
+            LoggingUtil.logger.info("User id:" + author_id + " created a reimbursement");
+            ctx.result("Successfully created a reimbursement under ID: " + author_id);
+            ctx.status(200);
+        } else {
+            LoggingUtil.logger.warn("User id:" + author_id + " could not create a reimbursement.");
+            ctx.status(403);
+            ctx.result("Could not create a reimbursement.");
+        }
+    }
+
 
     public void handleGetAllReimbursements(Context ctx){
         List<Reimbursement> reimbursementList = reimbursementService.getAllReimbursements();
