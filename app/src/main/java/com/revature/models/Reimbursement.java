@@ -13,7 +13,7 @@ public class Reimbursement {
     User resolver;
     String description;
 
-    public Reimbursement(double amount, ReimbursementType reimbursementType, User author) {
+    public Reimbursement(double amount, ReimbursementType reimbursementType, ReimbursementStatus pending, User author) {
         this.amount = amount;
         this.reimbursementType = reimbursementType;
         this.author = author;
@@ -30,6 +30,14 @@ public class Reimbursement {
         this.author = author;
         this.resolver = resolver;
         this.description = description;
+    }
+
+    public Reimbursement(double amount, int author_id, ReimbursementType reimbursementType) {
+        this.id = id;
+        User user = new User();
+        user.setId(author_id);
+        this.author = user;
+        this.reimbursementType = reimbursementType;
     }
 
     public Timestamp getTime_submitted() {
