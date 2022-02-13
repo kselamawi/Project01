@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8ff5612-a4de-4135-b16c-977898bc8acc" name="Changes" comment="&quot;incorporating Isaiah's work on finishing controllers and authentication&quot;">
+    <list default="true" id="e8ff5612-a4de-4135-b16c-977898bc8acc" name="Changes" comment="&quot;incorporating Isaiah's work fixing tests&quot;">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/test/java/com/revature/service/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/revature/service/UserServiceTest.java" afterDir="false" />
     </list>
@@ -17,10 +19,10 @@
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="ExternalProjectsData">
-    <projectState path="$PROJECT_DIR$">
+    <projectState path="$PROJECT_DIR$/../../Project0/project0-template">
       <ProjectState />
     </projectState>
-    <projectState path="$PROJECT_DIR$/../../Project0/project0-template">
+    <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
   </component>
@@ -86,10 +88,10 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
@@ -101,7 +103,7 @@
       <recent name="com.revature.models" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.UserServiceTest (1)">
+  <component name="RunManager" selected="Application.ReimbursementDriver">
     <configuration name="ReimbursementDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.revature.ReimbursementDriver" />
       <module name="newProject01.app.main" />
@@ -115,76 +117,70 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReimbursementServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Project1Feb10.22 [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":app:test" />
-            <option value="--tests" />
-            <option value="&quot;com.revature.service.ReimbursementServiceTest&quot;" />
+            <option value="dependencies" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ReimbursementServiceTest.approveReimbursementStatus" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Project1Feb10.22 [sonarqube]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":app:test" />
-            <option value="--tests" />
-            <option value="&quot;com.revature.service.ReimbursementServiceTest.approveReimbursementStatus&quot;" />
+            <option value="sonarqube" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="UserServiceTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Project1Feb10.22 [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":app:test" />
-            <option value="--tests" />
-            <option value="&quot;com.revature.service.UserServiceTest&quot;" />
+            <option value="test" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="UserTest.getUserRole" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UserServiceTest.testCreateUser" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -197,7 +193,7 @@
           <list>
             <option value=":app:test" />
             <option value="--tests" />
-            <option value="&quot;com.revature.models.UserTest.getUserRole&quot;" />
+            <option value="&quot;com.revature.service.UserServiceTest.testCreateUser&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -209,11 +205,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.UserServiceTest (1)" />
-        <item itemvalue="Gradle.ReimbursementServiceTest" />
-        <item itemvalue="Gradle.ReimbursementServiceTest.approveReimbursementStatus" />
+        <item itemvalue="Gradle.Project1Feb10.22 [sonarqube]" />
+        <item itemvalue="Gradle.Project1Feb10.22 [test]" />
+        <item itemvalue="Gradle.Project1Feb10.22 [dependencies]" />
         <item itemvalue="Application.ReimbursementDriver" />
-        <item itemvalue="Gradle.UserTest.getUserRole" />
+        <item itemvalue="Gradle.UserServiceTest.testCreateUser" />
       </list>
     </recent_temporary>
   </component>
@@ -233,7 +229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644765908761</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="&quot;incorporating Isaiah's work fixing tests&quot;">
+      <created>1644766244129</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1644766244129</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -254,6 +257,23 @@
     <MESSAGE value="&quot;shifted stuff around on my branch&quot;" />
     <MESSAGE value="Finished out controllers" />
     <MESSAGE value="&quot;incorporating Isaiah's work on finishing controllers and authentication&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;incorporating Isaiah's work on finishing controllers and authentication&quot;" />
+    <MESSAGE value="&quot;incorporating Isaiah's work fixing tests&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;incorporating Isaiah's work fixing tests&quot;" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/build.gradle</url>
+          <line>8</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/build.gradle</url>
+          <line>16</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
