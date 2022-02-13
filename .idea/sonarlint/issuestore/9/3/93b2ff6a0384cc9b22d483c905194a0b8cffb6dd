@@ -1,0 +1,22 @@
+
+@
+java:S1481"*Remove this unused "types" local variable.(äåÍ€
+N	java:S1063"9Replace this use of System.out or System.err by a logger.(èé³ë
+@
+java:S1481F"*Remove this unused "types" local variable.(äåÍ€
+M	java:S106Q"9Replace this use of System.out or System.err by a logger.(ÉİËL
+A
+java:S1168|"+Return an empty collection instead of null.(¥¹ï
+O	java:S106£"9Replace this use of System.out or System.err by a logger.(…ö¼Ñ
+e
+java:S1192s"JDefine a constant instead of duplicating this literal "last_name" 3 times.(Ìİ°éøÿÿÿÿ
+`
+java:S1192l"JDefine a constant instead of duplicating this literal "user_role" 3 times.(¦åú¥
+d
+java:S1192t"IDefine a constant instead of duplicating this literal "password" 3 times.(Ú½€öüÿÿÿÿ
+a
+java:S1192r"KDefine a constant instead of duplicating this literal "first_name" 3 times.(úâˆù
+\
+java:S1192q"FDefine a constant instead of duplicating this literal "email" 3 times.(ƒ™ÿ
+b
+java:S2095f"GUse try-with-resources or close this "Statement" in a "finally" clause.(œ©ûÿÿÿÿ

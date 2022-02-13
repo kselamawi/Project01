@@ -1,0 +1,10 @@
+
+s	java:S116
+"YRename this field "time_submitted" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ϋ™·ϋÿÿÿÿ
+r	java:S116"XRename this field "time_resolved" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”§λ€ωÿÿÿÿ
+b	java:S100+"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ο”¦^
+c	java:S100/"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ΛΎφ†
+h	java:S1003"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©Ϊ™ώÿÿÿÿ
+c	java:S1007"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(κιτ„
+f	java:S117/"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ΛΎφ†
+f	java:S1177"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(κιτ„

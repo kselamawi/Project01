@@ -1,0 +1,63 @@
+
+V	java:S125_"<This block of commented-out lines of code should be removed.(‰Ñõ§ÿÿÿÿÿ
+A
+java:S1168h"+Return an empty collection instead of null.(¥¹ï
+B
+java:S1168“"+Return an empty collection instead of null.(¥¹ï
+B
+java:S1168Ñ"+Return an empty collection instead of null.(¥¹ï
+A
+java:S1481Û"*Remove this unused "types" local variable.(Ù®ü
+T	java:S106ø"9Replace this use of System.out or System.err by a logger.(¬¢ Üûÿÿÿÿ
+A
+java:S1481"*Remove this unused "types" local variable.(Ù®ü
+T	java:S106•"9Replace this use of System.out or System.err by a logger.(Ş¦„Áùÿÿÿÿ
+W	java:S125Ó"<This block of commented-out lines of code should be removed.(‰Ñõ§ÿÿÿÿÿ
+B
+java:S1168İ"+Return an empty collection instead of null.(¥¹ï
+O	java:S106ì"9Replace this use of System.out or System.err by a logger.(¶‡ø
+B
+java:S1168Ä"+Return an empty collection instead of null.(¥¹ï
+B
+java:S1168í"+Return an empty collection instead of null.(¥¹ï
+f
+java:S1192M"PDefine a constant instead of duplicating this literal "reimb_status_id" 7 times.( ô¹¶
+a
+java:S1192L"KDefine a constant instead of duplicating this literal "reimb_type" 7 times.(«ôúŸ
+_
+java:S1192Ã"IDefine a constant instead of duplicating this literal "password" 3 times.(çîƒ<
+h
+java:S1192^"MDefine a constant instead of duplicating this literal "reimb_amount" 7 times.(ˆƒ÷Şÿÿÿÿÿ
+j
+java:S1192U"ODefine a constant instead of duplicating this literal "reimb_resolver" 3 times.(ıØ¶Ñşÿÿÿÿ
+h
+java:S1192‰"LDefine a constant instead of duplicating this literal "description" 4 times.(ÍÚÉœşÿÿÿÿ
+a
+java:S1192½"JDefine a constant instead of duplicating this literal "user_role" 3 times.(öµûË
+g
+java:S1192Á"KDefine a constant instead of duplicating this literal "first_name" 3 times.(ôáÙøÿÿÿÿ
+]
+java:S1192À"FDefine a constant instead of duplicating this literal "email" 3 times.(¬°
+f
+java:S1192Â"JDefine a constant instead of duplicating this literal "last_name" 3 times.(‚¹æúÿÿÿÿ
+h
+java:S1192\"MDefine a constant instead of duplicating this literal "reimb_author" 8 times.(Óåˆáıÿÿÿÿ
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õ×»×
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õ×»×
+k	java:S117'"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÈ²ÿşÿÿÿÿ
+k	java:S117'"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÈ²ÿşÿÿÿÿ
+l	java:S117—"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ºÍÂ²ùÿÿÿÿ
+g	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶£úÉ
+l	java:S117È"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­Ôø¤üÿÿÿÿ
+b
+java:S2095q"GUse try-with-resources or close this "Statement" in a "finally" clause.(œ©ûÿÿÿÿ
+b
+java:S2095F"GUse try-with-resources or close this "Statement" in a "finally" clause.(œ©ûÿÿÿÿ
+k
+java:S2095Î"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(×Êı‰ÿÿÿÿÿ
+c
+java:S2095ª"GUse try-with-resources or close this "Statement" in a "finally" clause.(œ©ûÿÿÿÿ
+k
+java:S2095Ÿ"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(×Êı‰ÿÿÿÿÿ
+k
+java:S2095¤"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(×Êı‰ÿÿÿÿÿ

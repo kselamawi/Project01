@@ -20,26 +20,34 @@ repositories {
 }
 
 dependencies {
-    // --- log4j maven dependency
+    // Use JUnit test framework.
+    testImplementation 'junit:junit:4.13.2'
+
+    // https://mvnrepository.com/artifact/org.mockito/mockito-core
+    testImplementation 'org.mockito:mockito-core:4.2.0'
+
+    // This dependency is used by the application.
+    implementation 'com.google.guava:guava:30.1.1-jre'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.1'
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.7.1'
+
     // https://mvnrepository.com/artifact/log4j/log4j
     implementation 'log4j:log4j:1.2.17'
 
-    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.12.4'
-    implementation 'org.junit.jupiter:junit-jupiter:5.8.1'
-    implementation 'org.junit.jupiter:junit-jupiter:5.8.1'
-// https://mvnrepository.com/artifact/junit/junit
-    testImplementation group: 'junit', name: 'junit', version: '4.13.1'
-// https://mvnrepository.com/artifact/org.mockito/mockito-core
-    testImplementation group: 'org.mockito', name: 'mockito-core', version: '3.12.4'
-    // This dependency is used by the application.
-    implementation 'com.google.guava:guava:30.1.1-jre'
-    // Javalin
-    implementation group: 'io.javalin', name: 'javalin', version: '4.3.0'
-    //Jackson dependency.
-    implementation group: 'org.slf4j', name: 'slf4j-simple', version: '1.8.0-beta4'
-// https://mvnrepository.com/artifact/org.postgresql/postgresql
-    implementation 'org.postgresql:postgresql:42.2.18'
+    // https://mvnrepository.com/artifact/org.postgresql/postgresql
+    implementation 'org.postgresql:postgresql:42.3.1'
+
+    // https://mvnrepository.com/artifact/io.javalin/javalin
+    implementation 'io.javalin:javalin:4.1.1'
+
+    // https://mvnrepository.com/artifact/org.slf4j/slf4j-simple
+    implementation 'org.slf4j:slf4j-simple:1.7.32'
+
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.1'
 }
+
 test{
     useJUnitPlatform()
 }

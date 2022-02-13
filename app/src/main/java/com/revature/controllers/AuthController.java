@@ -1,5 +1,7 @@
 package com.revature.controllers;
 
+import com.revature.dao.ReimbursementDao;
+import com.revature.dao.ReimbursementDaoImpl;
 import com.revature.models.User;
 import com.revature.service.ReimbursementService;
 import com.revature.service.UserService;
@@ -9,7 +11,8 @@ import io.javalin.http.UnauthorizedResponse;
 
 public class AuthController {
     private UserService userService = new UserService();
-    private ReimbursementService reimbursementService = new ReimbursementService();
+    private ReimbursementDao reimbursementDao = new ReimbursementDaoImpl();
+    private ReimbursementService reimbursementService = new ReimbursementService(reimbursementDao);
 
 
     public void handleLogin(Context ctx){
