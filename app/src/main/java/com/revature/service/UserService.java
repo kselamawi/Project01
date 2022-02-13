@@ -1,13 +1,15 @@
 package com.revature.service;
 
 import com.revature.dao.UserDao;
-import com.revature.dao.UserDaoImpl;
 import com.revature.models.User;
 
 import java.util.List;
 
 public class UserService {
-    private UserDao userDao = new UserDaoImpl();
+    private UserDao userDao;
+    public UserService(UserDao userDao){
+        this.userDao = userDao;
+    }
 
 
     // ---verifying login

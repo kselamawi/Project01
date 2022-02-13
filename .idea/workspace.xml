@@ -5,15 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8ff5612-a4de-4135-b16c-977898bc8acc" name="Changes" comment="&quot;Starting testing&quot;">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/e/1e8aa4d68d391259bf4225eaa8879723af58d98d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/1/8163c4788922234e5e1d515293096577225c4471" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/2/82632a8c9a14d959b4b18e989b6bcd48eae1284b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/3/93b2ff6a0384cc9b22d483c905194a0b8cffb6dd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/3/c30fddb0439f58ca7b412c2eda9ea7d84858f8d8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/8/c8efb88e44ba24395badea17949be5e5b7cd6cad" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/ReimbursementDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/ReimbursementDriver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/out/production/classes/com/revature/controllers/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/out/production/classes/com/revature/controllers/AuthController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/out/production/classes/com/revature/controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/out/production/classes/com/revature/controllers/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/out/production/classes/com/revature/dao/UserDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/out/production/classes/com/revature/dao/UserDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/out/production/classes/com/revature/service/ReimbursementService.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/out/production/classes/com/revature/service/ReimbursementService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/out/production/classes/com/revature/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/out/production/classes/com/revature/service/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/controllers/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/controllers/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/controllers/ReimbursementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/controllers/ReimbursementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/dao/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/dao/UserDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/service/ReimbursementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/service/ReimbursementService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/revature/service/UserServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/service/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,8 +75,8 @@
         <option value="Interface" />
         <option value="JUnit3 Test Class" />
         <option value="JUnit5 Test Class" />
-        <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -123,89 +132,7 @@
       <recent name="com.revature.models" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserServiceTest">
-    <configuration name="ReimbursementDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.revature.ReimbursementDriver" />
-      <module name="newProject01.app.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.revature.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":app:test" />
-            <option value="--tests" />
-            <option value="&quot;com.revature.service.UserServiceTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="UserServiceTest.createUser" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":app:test" />
-            <option value="--tests" />
-            <option value="&quot;com.revature.service.UserServiceTest.createUser&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="UserServiceTest.shouldThrowRuntimeException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":app:test" />
-            <option value="--tests" />
-            <option value="&quot;com.revature.service.UserServiceTest.shouldThrowRuntimeException&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="JUnit.com.revature.service in newProject01.app.test">
     <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="newProject01.app.test" />
       <extension name="coverage">
@@ -221,13 +148,75 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserServiceTest.getUserByEmailAndPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="newProject01.app.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.revature.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.revature.service" />
+      <option name="MAIN_CLASS_NAME" value="com.revature.service.UserServiceTest" />
+      <option name="METHOD_NAME" value="getUserByEmailAndPassword" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.getUserById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="newProject01.app.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.revature.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.revature.service" />
+      <option name="MAIN_CLASS_NAME" value="com.revature.service.UserServiceTest" />
+      <option name="METHOD_NAME" value="getUserById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.updateUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="newProject01.app.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.revature.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.revature.service" />
+      <option name="MAIN_CLASS_NAME" value="com.revature.service.UserServiceTest" />
+      <option name="METHOD_NAME" value="updateUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.revature.service in newProject01.app.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="newProject01.app.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.revature.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.revature.service" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.com.revature.service in newProject01.app.test" />
+        <item itemvalue="JUnit.UserServiceTest.updateUser" />
+        <item itemvalue="JUnit.UserServiceTest.getUserById" />
+        <item itemvalue="JUnit.UserServiceTest.getUserByEmailAndPassword" />
         <item itemvalue="JUnit.UserServiceTest" />
-        <item itemvalue="Gradle.UserServiceTest" />
-        <item itemvalue="Gradle.UserServiceTest.shouldThrowRuntimeException" />
-        <item itemvalue="Gradle.UserServiceTest.createUser" />
-        <item itemvalue="Application.ReimbursementDriver" />
       </list>
     </recent_temporary>
   </component>
@@ -264,7 +253,10 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/newProject01$UserServiceTest.ic" NAME="UserServiceTest Coverage Results" MODIFIED="1644618407211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/newProject01$ReimbursementDriver.ic" NAME="ReimbursementDriver Coverage Results" MODIFIED="1644619267498" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/newProject01$ReimbursementServiceTest.ic" NAME="ReimbursementServiceTest Coverage Results" MODIFIED="1644774719120" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.revature.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/newProject01$ReimbursementDriver.ic" NAME="ReimbursementDriver Coverage Results" MODIFIED="1644774036289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.revature.*</FILTER>
     </SUITE>
   </component>
