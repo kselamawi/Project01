@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8ff5612-a4de-4135-b16c-977898bc8acc" name="Changes" comment="Finished out controllers">
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/ReimbursementDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/ReimbursementDriver.java" afterDir="false" />
+    <list default="true" id="e8ff5612-a4de-4135-b16c-977898bc8acc" name="Changes" comment="&quot;incorporating Isaiah's work on finishing controllers and authentication&quot;">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/test/java/com/revature/service/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/revature/service/UserServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,6 +45,9 @@
         <option value="JUnit5 Test Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/main" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -98,7 +101,7 @@
       <recent name="com.revature.models" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ReimbursementDriver">
+  <component name="RunManager" selected="Gradle.UserServiceTest (1)">
     <configuration name="ReimbursementDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.revature.ReimbursementDriver" />
       <module name="newProject01.app.main" />
@@ -158,7 +161,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="UserServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UserServiceTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -206,9 +209,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.UserServiceTest (1)" />
         <item itemvalue="Gradle.ReimbursementServiceTest" />
         <item itemvalue="Gradle.ReimbursementServiceTest.approveReimbursementStatus" />
-        <item itemvalue="Gradle.UserServiceTest" />
         <item itemvalue="Application.ReimbursementDriver" />
         <item itemvalue="Gradle.UserTest.getUserRole" />
       </list>
@@ -223,6 +226,14 @@
       <option name="presentableId" value="Default" />
       <updated>1643997151958</updated>
     </task>
+    <task id="LOCAL-00001" summary="&quot;incorporating Isaiah's work on finishing controllers and authentication&quot;">
+      <created>1644765908761</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1644765908761</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -242,6 +253,7 @@
     </ignored-roots>
     <MESSAGE value="&quot;shifted stuff around on my branch&quot;" />
     <MESSAGE value="Finished out controllers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished out controllers" />
+    <MESSAGE value="&quot;incorporating Isaiah's work on finishing controllers and authentication&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;incorporating Isaiah's work on finishing controllers and authentication&quot;" />
   </component>
 </project>
