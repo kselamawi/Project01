@@ -1,5 +1,7 @@
 package com.revature.controllers;
 
+import com.revature.dao.ReimbursementDao;
+import com.revature.dao.ReimbursementDaoImpl;
 import com.revature.models.Reimbursement;
 import com.revature.models.ReimbursementType;
 import com.revature.models.User;
@@ -12,7 +14,8 @@ import java.util.List;
 import static java.lang.Integer.parseInt;
 
 public class ReimbursementController {
-    private ReimbursementService reimbursementService = new ReimbursementService();
+    private ReimbursementDao reimbursementDao = new ReimbursementDaoImpl();
+    private ReimbursementService reimbursementService = new ReimbursementService(reimbursementDao);
 
     public void handleCreateReimbursement(Context ctx){
         LoggingUtil.logger.info("Attempting to create a reimbursement");

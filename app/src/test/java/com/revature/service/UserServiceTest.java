@@ -1,77 +1,79 @@
 package com.revature.service;
 
-import com.revature.dao.ReimbursementDao;
 import com.revature.dao.UserDao;
-import com.revature.models.Reimbursement;
 import com.revature.models.User;
-import com.revature.models.UserRole;
-import com.revature.util.LoggingUtil;
-import com.sun.media.jfxmedia.logging.Logger;
 import org.junit.Before;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
-import static org.junit.Assert.assertTrue;
+import java.util.List;
+
+import static org.junit.Assert.assertEquals;
+import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.when;
 
-class UserServiceTest {
+public class UserServiceTest {
 
     @Mock
-    UserDao userDao;
-    ReimbursementDao reimbursementDao;
+    UserDao userdao;
 
     @InjectMocks
     UserService userService;
-    ReimbursementService reimbursementService;
     User user;
-    Reimbursement reimbursement;
+    List<User> userList;
 
     @Before
-    public void setup(){
+    public void setupTest(){
         MockitoAnnotations.openMocks(this);
     }
 
     @Test
-    void testCreateUser(){
-        user = new User(89, "Paul", "Ball", UserRole.EMPLOYEE, "paul.ball@gmail.com", "password");
-        when(userDao.createUser(user)).thenReturn(true);
-        assertTrue(userService.createUser(user));
+    public void getUserByEmailAndPassword() {
+        when(userService.getUserByEmailAndPassword(anyString(), anyString()))
+                .thenReturn(user);
+
+        assertEquals(userService.getUserByEmailAndPassword(anyString(), anyString()), user);
     }
 
     @Test
-    void testIfUserExistsById() {
-        user = new User(94, "Will", "Mill", UserRole.EMPLOYEE, "will.mill@gmail.com", "password");
-        when(userDao.getUserById(94)).thenReturn(user);
-        assertTrue(userService.createUser(user));
-        LoggingUtil.logger.info(user);
+    public void createUser() {
+        when(userService.createUser(any()))
+                .thenReturn(true);
+
+        assertEquals(userService.createUser(any()), true);
     }
 
     @Test
-    void itShouldCheckIfUserExistById() {
+    public void deleteUser() {
+        when(userService.deleteUser(anyInt()))
+                .thenReturn(true);
 
+        assertEquals(userService.deleteUser(anyInt()), true);
     }
 
     @Test
-    void verifyLogin() {
+    public void getAllUsers() {
+        when(userService.getAllUsers())
+                .thenReturn(userList);
+
+        assertEquals(userService.getAllUsers(), userList);
     }
 
     @Test
-    void createUser() {
+    public void getUserById() {
+        when(userService.getUserById(anyInt()))
+                .thenReturn(user);
+
+        assertEquals(userService.getUserById(anyInt()), user);
     }
 
     @Test
-    void deleteUser() {
-    }
+    public void updateUser() {
+        when(userService.updateUser(any()))
+                .thenReturn(true);
 
-    @Test
-    void getAllUsers() {
-    }
-
-
-
-    @Test
-    void updateUser() {
+        assertEquals(userService.updateUser(any()), true);
     }
 }
