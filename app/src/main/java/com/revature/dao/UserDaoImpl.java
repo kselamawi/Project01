@@ -22,10 +22,10 @@ public class UserDaoImpl implements UserDao{
             ps.setString(2, user.getPassword());
             ps.setString(3, user.getF_name());
             ps.setString(4, user.getL_name());
-            ps.setInt(5,  0);
+            ps.setInt(5,  user.getUserRole().ordinal());
             int alteredRows = ps.executeUpdate();
             if(alteredRows == 1){
-                System.out.println("User was created");
+                System.out.println("User " + user.getId() + " was created");
                 return true;
             }
 

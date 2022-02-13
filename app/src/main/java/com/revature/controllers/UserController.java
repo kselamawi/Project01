@@ -1,5 +1,7 @@
 package com.revature.controllers;
 
+import com.revature.dao.UserDao;
+import com.revature.dao.UserDaoImpl;
 import com.revature.models.User;
 import com.revature.service.UserService;
 import io.javalin.http.Context;
@@ -9,7 +11,8 @@ import java.util.List;
 import static java.lang.Integer.parseInt;
 
 public class UserController {
-    private UserService userService = new UserService();
+    private UserDao userDao = new UserDaoImpl();
+    private UserService userService = new UserService(userDao);
 
     public void handleGetAllUsers(Context ctx){
         List<User> userList = userService.getAllUsers();

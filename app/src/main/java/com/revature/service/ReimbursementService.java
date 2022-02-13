@@ -1,7 +1,6 @@
 package com.revature.service;
 
 import com.revature.dao.ReimbursementDao;
-import com.revature.dao.ReimbursementDaoImpl;
 import com.revature.models.Reimbursement;
 
 import java.util.List;
@@ -9,7 +8,11 @@ import java.util.List;
 public class ReimbursementService {
 
 
-    private ReimbursementDao reimbursementDao = new ReimbursementDaoImpl();
+    private ReimbursementDao reimbursementDao;
+
+    public ReimbursementService(ReimbursementDao reimbursementDao){
+    this.reimbursementDao = reimbursementDao;
+    }
 
     //Approve or Deny a reimbursement
     public boolean changeReimbursementStatus(int reimb_id, int resolver_id, boolean approve){
@@ -67,6 +70,7 @@ public class ReimbursementService {
     public boolean deleteReimbursement(int id){
         return reimbursementDao.deleteReimbursement(id);
     }
+
     //Update a Reimbursement
     public boolean updateReimbursement(Reimbursement reimbursement){
         return reimbursementDao.updateReimbursement(reimbursement);
