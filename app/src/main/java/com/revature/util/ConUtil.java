@@ -11,12 +11,7 @@ public class ConUtil {
 
     public static Connection getConnection() throws SQLException {
         LoggingUtil.logger.info(" Connection attempted ");
-        String url = "jdbc:postgresql://104.198.133.244:5432/";
-        //String url = "jdbc:postgresql://34.132.250.211/";
-        String username = "postgres";
-        String password = "12358";
-        //String password = "password";
 
-        return DriverManager.getConnection(url, username, password);
+        return DriverManager.getConnection(System.getenv("DB_URL"), System.getenv("DB_USER"), System.getenv("DB_PASSWORD"));
     }
 }
