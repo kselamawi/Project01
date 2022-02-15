@@ -12,7 +12,10 @@ public class ConUtil {
         LoggingUtil.logger.info(" Connection attempted ");
         //THERE WAS AN UPDATE, WHY WON'T YOU CHANGE JENKINS!!!
         String url = "jdbc:postgresql://" + System.getenv("DB_URL") + ":5432/";
-
-        return DriverManager.getConnection(url, System.getenv("DB_USER"), System.getenv("DB_PASS"));
+        String test = "jdbc:postgresql://104.198.133.244:5432/postgres";
+        String username = System.getenv("DB_USER");
+        String password = System.getenv("DB_PASS");
+        System.out.println(url);
+        return DriverManager.getConnection(url, username, password);
     }
 }
