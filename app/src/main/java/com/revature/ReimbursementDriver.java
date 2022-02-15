@@ -6,7 +6,7 @@ public class ReimbursementDriver {
     public static void main(String[] args) {
         BasicConfigurator.configure();
         JavalinApp app = new JavalinApp();
-        app.start(7000);
+        app.start(7070);
 
     }
 
