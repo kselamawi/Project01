@@ -4,25 +4,6 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8ff5612-a4de-4135-b16c-977898bc8acc" name="Changes" comment="&quot;Starting testing&quot;">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/e/1e8aa4d68d391259bf4225eaa8879723af58d98d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/1/8163c4788922234e5e1d515293096577225c4471" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/2/82632a8c9a14d959b4b18e989b6bcd48eae1284b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/3/93b2ff6a0384cc9b22d483c905194a0b8cffb6dd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/3/c30fddb0439f58ca7b412c2eda9ea7d84858f8d8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/8/c8efb88e44ba24395badea17949be5e5b7cd6cad" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/out/production/classes/com/revature/controllers/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/out/production/classes/com/revature/controllers/AuthController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/out/production/classes/com/revature/controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/out/production/classes/com/revature/controllers/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/out/production/classes/com/revature/dao/UserDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/out/production/classes/com/revature/dao/UserDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/out/production/classes/com/revature/service/ReimbursementService.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/out/production/classes/com/revature/service/ReimbursementService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/out/production/classes/com/revature/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/out/production/classes/com/revature/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/controllers/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/controllers/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/dao/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/dao/UserDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/service/ReimbursementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/service/ReimbursementService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/revature/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/revature/service/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,10 +14,10 @@
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="ExternalProjectsData">
-    <projectState path="$PROJECT_DIR$/../../Project0/project0-template">
+    <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
-    <projectState path="$PROJECT_DIR$">
+    <projectState path="$PROJECT_DIR$/../../Project0/project0-template">
       <ProjectState />
     </projectState>
   </component>
