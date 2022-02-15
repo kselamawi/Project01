@@ -10,7 +10,8 @@ public class ConUtil {
     }
 
     public static Connection getConnection() throws SQLException {
+        LoggingUtil.logger.info(" Connection attempted ");
 
-        return DriverManager.getConnection(System.getenv("DB_URL"), System.getenv("DB_USER"), System.getenv("DB_PASS"));
+        return DriverManager.getConnection(System.getenv("DB_URL"), System.getenv("DB_USER"), System.getenv("DB_PASSWORD"));
     }
 }
