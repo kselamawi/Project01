@@ -59,12 +59,12 @@ public class JavalinApp {
             });
         });
         //Reimbursements authorization for Managers.
-        before("/reimbursements", authController::authorizeManagerToken);
-        before("/reimbursements/{id}", authController::authorizeManagerToken);
-        before("/reimbursements/pending", authController::authorizeManagerToken);
-        before("/reimbursements/resolved", authController::authorizeManagerToken);
-        before("/reimbursements/{id}/approve", authController::authorizeManagerToken);
-        before("/reimbursements/{id}/deny", authController::authorizeManagerToken);
+//        before("/reimbursements", authController::authorizeManagerToken);
+//        before("/reimbursements/{id}", authController::authorizeManagerToken);
+//        before("/reimbursements/pending", authController::authorizeManagerToken);
+//        before("/reimbursements/resolved", authController::authorizeManagerToken);
+//        before("/reimbursements/{id}/approve", authController::authorizeManagerToken);
+//        before("/reimbursements/{id}/deny", authController::authorizeManagerToken);
         //Users authorization for Users and Managers
         before("/users", authController::authorizeManagerToken);
         before("/users/{id}", authController::authorizeEmployeeToken);

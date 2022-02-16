@@ -11,7 +11,8 @@ public class ConUtil {
     public static Connection getConnection() throws SQLException {
         LoggingUtil.logger.info(" Connection attempted ");
         //THERE WAS AN UPDATE, WHY WON'T YOU CHANGE JENKINS!!!
-        String url = "jdbc:postgresql://" + System.getenv("DB_URL") + ":5432/";
+        String urlIp = System.getenv("DB_URL");
+        String url = "jdbc:postgresql://" + urlIp + ":5432/postgres";
         String test = "jdbc:postgresql://104.198.133.244:5432/postgres";
         String username = System.getenv("DB_USER");
         String password = System.getenv("DB_PASS");

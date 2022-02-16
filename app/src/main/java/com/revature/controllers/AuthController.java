@@ -8,6 +8,7 @@ import com.revature.models.User;
 import com.revature.service.ReimbursementService;
 import com.revature.service.UserService;
 import com.revature.util.LoggingUtil;
+import io.javalin.core.util.Header;
 import io.javalin.http.Context;
 import io.javalin.http.UnauthorizedResponse;
 
@@ -38,6 +39,7 @@ public class AuthController {
 
     public void authorizeEmployeeToken(Context ctx){
         LoggingUtil.logger.info("Verifying employee is logged in");
+        ctx.header("Access-Control-Expose-Headers", "*");
 
         if(ctx.header("Authorization")!= null){
             if(ctx.header("Authorization").equals("EMPLOYEE")) {
@@ -54,11 +56,11 @@ public class AuthController {
 
     public void authorizeManagerToken(Context ctx){
         LoggingUtil.logger.info("Verifying manager is logged in");
+        ctx.header("Access-Control-Expose-Headers", "*");
 
         if(ctx.header("Authorization")!= null){
             if(ctx.header("Authorization").equals("MANAGER")) {
                 LoggingUtil.logger.info("User has Manager authorization");
-                ctx.status(200);
             } else {
                 throw new UnauthorizedResponse("You need to be a manager to use this feature");
             }

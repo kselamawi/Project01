@@ -13,8 +13,11 @@ import static java.lang.Integer.parseInt;
 public class UserController {
     private UserDao userDao = new UserDaoImpl();
     private UserService userService = new UserService(userDao);
+    private AuthController authController = new AuthController();
 
     public void handleGetAllUsers(Context ctx){
+        authController.authorizeManagerToken(ctx);
+
         List<User> userList = userService.getAllUsers();
         if(userList.isEmpty()){
             ctx.status(403);
@@ -41,6 +44,7 @@ public class UserController {
 
 
     public void handleGetUserById(Context ctx){
+        authController.authorizeEmployeeToken(ctx);
         User u = userService.getUserById(parseInt(ctx.pathParam("id")));
         System.out.println(u);
         if(u==null){
@@ -54,6 +58,8 @@ public class UserController {
 
 
     public void handleUpdateUserById(Context ctx){
+        authController.authorizeEmployeeToken(ctx);
+
         int id = Integer.parseInt(ctx.pathParam("id"));
         User u = ctx.bodyAsClass(User.class);
         u.setId(id);

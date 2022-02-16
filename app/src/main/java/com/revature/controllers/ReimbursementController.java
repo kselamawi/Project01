@@ -16,6 +16,7 @@ import static java.lang.Integer.parseInt;
 public class ReimbursementController {
     private ReimbursementDao reimbursementDao = new ReimbursementDaoImpl();
     private ReimbursementService reimbursementService = new ReimbursementService(reimbursementDao);
+    private AuthController authController = new AuthController();
 
     public void handleCreateReimbursement(Context ctx){
         LoggingUtil.logger.info("Attempting to create a reimbursement");
@@ -37,6 +38,8 @@ public class ReimbursementController {
 
 
     public void handleGetAllReimbursements(Context ctx){
+        authController.authorizeManagerToken(ctx);
+
         List<Reimbursement> reimbursementList = reimbursementService.getAllReimbursements();
         System.out.println(reimbursementList);
        if(reimbursementList.isEmpty()){
@@ -47,7 +50,11 @@ public class ReimbursementController {
            ctx.json(reimbursementList);
        }
     }
+
+
     public void handleGetReimbursementsById(Context ctx){
+        authController.authorizeManagerToken(ctx);
+
         int id = Integer.parseInt(ctx.pathParam("id"));
         Reimbursement reimbursement = reimbursementService.getReimbursementById(id);
         if(reimbursement==null){
@@ -60,6 +67,8 @@ public class ReimbursementController {
     }
 
     public void handleDenyReimbursement(Context ctx){
+        authController.authorizeManagerToken(ctx);
+
         int id = parseInt(ctx.pathParam("id"));
         User user = ctx.bodyAsClass(User.class);
 
@@ -73,6 +82,8 @@ public class ReimbursementController {
     }
 
     public void handleApproveReimbursement(Context ctx){
+        authController.authorizeManagerToken(ctx);
+
         int id = parseInt(ctx.pathParam("id"));
         User user = ctx.bodyAsClass(User.class);
 
@@ -86,6 +97,8 @@ public class ReimbursementController {
     }
 
     public void handleGetReimbursementsByAuthor(Context ctx){
+        authController.authorizeEmployeeToken(ctx);
+
         int id = parseInt(ctx.pathParam("id"));
         List<Reimbursement> reimbursement= reimbursementService.getAllReimbursementsByAuthor(id);
         if(reimbursement.isEmpty()){
@@ -97,6 +110,8 @@ public class ReimbursementController {
         }
     }
     public void handleGetAllReimbursementPending(Context ctx){
+        authController.authorizeManagerToken(ctx);
+
         List<Reimbursement> reimbursementPending =reimbursementService.getAllPendingReimbursements();
         System.out.println(reimbursementPending);
         if(reimbursementPending.isEmpty()){
@@ -109,6 +124,8 @@ public class ReimbursementController {
     }
 
     public void handleGetAllResolvedReimbursement(Context ctx){
+        authController.authorizeManagerToken(ctx);
+
         List<Reimbursement> reimbursementResolve =reimbursementService.getAllResolvedReimbursements();
         if(reimbursementResolve.isEmpty()){
             ctx.result("There are no resolved reimbursements");
@@ -119,6 +136,8 @@ public class ReimbursementController {
         }
     }
     public void handleGetAllPendingByUserID(Context ctx){
+        authController.authorizeEmployeeToken(ctx);
+
         int id = Integer.parseInt(ctx.pathParam("id"));
         List<Reimbursement> pendingReimbursemetsByUsers =reimbursementService.getAllPendingReimbursementsByAuthor(id);
         System.out.println(id);
@@ -132,7 +151,9 @@ public class ReimbursementController {
     }
     // ---
      public void  handleGetResolvedByUserID (Context ctx){
-    int id = Integer.parseInt(ctx.pathParam("id"));
+         authController.authorizeEmployeeToken(ctx);
+
+         int id = Integer.parseInt(ctx.pathParam("id"));
     List<Reimbursement> resolvedReimbursemetsByUsers =reimbursementService.getAllResolvedReimbursementsByAuthor(id);
       if(resolvedReimbursemetsByUsers.isEmpty()){
           ctx.result("there are no any resolved reimbursement yet");
