@@ -1,9 +1,8 @@
 
- var allpd =document.getElementById('view-all button');
+ var allpd = document.getElementById('view-all button');
  allpd.addEventListener('click', () => {
-const URL ='https://34.138.63.74:7070/reimbursements';
-var authorization ={
-    "Authorization":"MANAGER" };
+const URL ='http://34.138.63.74:7070/reimbursements';
+var authorization ={ "Authorization":"MANAGER" };
 fetch (URL,{
     method:"GET",
     headers :

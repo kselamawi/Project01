@@ -13,7 +13,8 @@ public class JavalinApp {
     private ReimbursementController reimbursementController = new ReimbursementController();
     private AuthController authController = new AuthController();
 
-    private Javalin app = Javalin.create().routes(() -> {
+    private Javalin app = Javalin.create(config -> {config.enableCorsForAllOrigins();
+    }).routes(() -> {
         path("/login", () -> {
            post(authController::handleLogin);
         });
