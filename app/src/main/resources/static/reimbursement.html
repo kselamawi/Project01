@@ -12,12 +12,36 @@
       <h1>View All Pending Reimbursemnets</h1>
       <div class="pending-list">
         <div id="PendingReimbursements">
-        <p>I'm different</p>
         </div>
       </div>
-      <button id="view-all button"></button>
+      <button id="view-pending-button">View Pending</button>
 
 </div>
+
+<div class="tabs">
+  <h1>View All Resolved Reimbursemnets</h1>
+  <div class="resolved-list">
+    <div id="ResolvedReimbursements">
+    </div>
+  </div>
+  <button id="view-resolved-button">View Resolved</button>
+
+</div>
+
+<div class="tabs">
+  <h1>Approve or Deny Request</h1>
+  <div class="changeReimbursement">
+    <form>
+      <label for="reimbID">Reimbursement ID:</label>
+      <input type="number" name="reimbID" id="reimbID" required></input>
+    </form>
+  </div>
+  <button id="approve-button">Approve</button>
+  <button id="deny-button">Deny</button>
+
+
+</div>
+
 <script src="reimbursement.js"></script>
 
 </body></html>
