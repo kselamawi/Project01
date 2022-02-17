@@ -2,6 +2,7 @@ package com.revature.models;
 
 import java.sql.Timestamp;
 
+//testing Jenkins
 public class Reimbursement {
     Integer id;
     double amount;
