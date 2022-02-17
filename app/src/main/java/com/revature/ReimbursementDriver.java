@@ -7,7 +7,7 @@ public class ReimbursementDriver {
         BasicConfigurator.configure();
         JavalinApp app = new JavalinApp();
         app.start(7070);
-
+        System.out.println("testing Jenkins/GCP/Docker");
     }
 
 }
