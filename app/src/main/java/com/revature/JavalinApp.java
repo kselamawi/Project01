@@ -4,6 +4,7 @@ import com.revature.controllers.AuthController;
 import com.revature.controllers.ReimbursementController;
 import com.revature.controllers.UserController;
 import io.javalin.Javalin;
+import io.javalin.http.staticfiles.Location;
 
 import static io.javalin.apibuilder.ApiBuilder.*;
 
@@ -14,6 +15,7 @@ public class JavalinApp {
     private AuthController authController = new AuthController();
 
     private Javalin app = Javalin.create(config -> {config.enableCorsForAllOrigins();
+        config.addStaticFiles("/static", Location.CLASSPATH);
     }).routes(() -> {
         path("/login", () -> {
            post(authController::handleLogin);
