@@ -1,13 +1,13 @@
 
  var allpd = document.getElementById('view-all button');
  allpd.addEventListener('click', () => {
-const URL ='http://localhost:7070/reimbursements';
+const URL ='http://http://34.138.63.74/:7070/reimbursements';
 
 var newElement = document.createElement("ul");
 
 var pendingList = document.getElementsByClassName("pending-list");
 
-fetch (URL,{
+fetch (apiURL,{
     method:"GET",
     headers : {
     'Authorization':'MANAGER',
