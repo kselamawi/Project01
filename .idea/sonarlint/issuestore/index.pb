@@ -4,8 +4,6 @@
 Dockerfile,6\6\6651ddff6eb82c840ced7c1dddee15c6e1913dd4
 H
 app/src/log4j.properties,7\8\785ee870728c6279c23fd761ed6a7b7f5a1490b7
-@
-app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
 S
 #.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
 n
@@ -26,5 +24,3 @@ X
 (app/src/main/resources/static/Login.html,a\a\aaf76188297613d2961468d78bd26f7beddedfc1
 ^
 .app/src/main/resources/static/reimbursement.js,e\2\e2fd098d849051fae80d15c56d712a0542288090
-_
-/app/src/main/resources/static/reimbursement.css,8\2\821ceeea10e6cee8e3089bc7da8cba2404294ee1
