@@ -16,7 +16,7 @@ public class UserController {
     private AuthController authController = new AuthController();
 
     public void handleGetAllUsers(Context ctx){
-        authController.authorizeManagerToken(ctx);
+//        authController.authorizeManagerToken(ctx);
 
         List<User> userList = userService.getAllUsers();
         if(userList.isEmpty()){
