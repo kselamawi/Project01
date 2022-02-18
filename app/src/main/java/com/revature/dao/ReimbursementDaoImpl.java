@@ -413,7 +413,7 @@ public class ReimbursementDaoImpl implements  ReimbursementDao {
     //We're going to get all reimbursements by author id, then filter by pending
     public List<Reimbursement> getAllPendingReimbursementsByAuthor(int author_id) {
         LoggingUtil.logger.info("get All Pending Reimbursements by Author ID");
-        String sql = "select * from users u inner join reimbursement r on r.reimb_author = u.id inner join users u2 on r.reimb_resolver = u2.id where u.id = ? and r.reimb_status_id = 0";
+        String sql = "select * from users u inner join reimbursement r on r.reimb_author = u.id where u.id = ? and r.reimb_status_id = 0";
         Connection c = null;
         try {
             c = ConUtil.getConnection();
@@ -433,7 +433,7 @@ public class ReimbursementDaoImpl implements  ReimbursementDao {
                 reimbursement.setReimbursementType(types[typeOrdinal]);
                 if(rs.getInt("reimb_author")!=0) {
                     User u = new User();
-                    u.setId(rs.getInt(16));
+                    u.setId(rs.getInt(1));
                     reimbursement.setResolver(u);
                 }
                 reimbursement.setReimbursementStatus(types2[typeOrdinal2]);
@@ -444,6 +444,7 @@ public class ReimbursementDaoImpl implements  ReimbursementDao {
                 reimbursement.setDescription(rs.getString("description"));
                 reimbursementList.add(reimbursement);
             }
+            System.out.println(reimbursementList);
             return reimbursementList;
 
         } catch (SQLException e) {
@@ -455,7 +456,7 @@ public class ReimbursementDaoImpl implements  ReimbursementDao {
     @Override
     public List<Reimbursement> getAllResolvedReimbursementsByAuthor(int author_id) {
         LoggingUtil.logger.info("get All Pending Reimbursements by Author ID");
-        String sql = "select * from users u inner join reimbursement r on r.reimb_author = u.id inner join users u2 on r.reimb_resolver = u2.id where u.id = ? and  r.reimb_status_id != 0";
+        String sql = "select * from users u inner join reimbursement r on r.reimb_author = u.id where u.id = ? and  r.reimb_status_id != 0";
         Connection c = null;
         try {
             c = ConUtil.getConnection();
@@ -474,7 +475,7 @@ public class ReimbursementDaoImpl implements  ReimbursementDao {
                 reimbursement.setId(rs.getInt(7));
                 reimbursement.setReimbursementType(types[typeOrdinal]);
                 User u = new User();
-                u.setId(rs.getInt(16));
+                u.setId(rs.getInt(1));
                 reimbursement.setResolver(u);
                 reimbursement.setReimbursementStatus(types2[typeOrdinal2]);
                 User u2 = new User();

@@ -1,26 +1,45 @@
 ﻿<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>Home Page</title>
-    <link rel ="stylesheet" href="login.css"> </link>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css"> <link>
 </head>
-
 <body>
-    <div><h1>Welcome</h1></div>
-    
-    <div>
-        <h3>Please Login</h3>
-
-        <form>
-            <label for="email">Email: </label>
-            <input type="text" name="email" maxlength="50" id="email" required />
-            <label for="password">Password: </label>
-            <input type="password" name="password" minlength="8" id="password" required />
-            <input type="submit" value="Login" id="submitButton"/>
-        </form>
+<div class="container">
+    <div class="card">
+        <div class="inner-box" id="form">
+            <div class="cord-fornt">
+                <h1>Please Login</h1>
+                <form>
+                    <label for="email">Email</label>
+                    <input type="email" class="input-box" placeholder="enter your email" maxlength="50" id="email" required/>
+                    <label for="password">Password</label>
+                    <input type="password" class="input-box" placeholder="enter your password" minlength="8" id="password" required/>
+                    <button id="submitButton">Login</button>
+                    <input type="checkbox" /><span>Remember Me</span>
+                    <button type="button" class="btn" onclick="OpenRegister()">I'm New Here</button>
+                    <a href="">Forgot Password</a>
+                </form>
+            </div>
+            <div class="cord-back">
+                <h1>REGISTER</h1>
+                <form>
+                    <input id="registerEmail" type="email" class="input-box" placeholder="enter your email" />
+                    <input id="registerPassword"  type="password" class="input-box" placeholder="enter your password " />
+                    <input id="firstName" type="text" class="input-box" placeholder="enter your first name" />
+                    <input id="lastName" type="text" class="input-box" placeholder="enter your last name" />
+                    <button id="registerBtn">Submit</button>
+                    <input type="checkbox" /><span>Remember Me</span>
+                    <button type="button" class="btn" onclick="OpenLogin()">I have an account</button>
+                    <a href="">Forgot Password</a>
+                </form>
+            </div>
+        </div>
     </div>
-    <script src="FrontPage.js"></script>
+</div>
+<script src="Login.js"></script>
 </body>
 </html>

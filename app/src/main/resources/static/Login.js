@@ -1,40 +1,96 @@
-// JavaScript source code
+// login function
+  var form = document.getElementById("form");
 
-//Declare an object and reference the submit button.
-let submitButton = document.getElementById("submitButton");
-// Declare an object and put the API link inside.
-let URL = "http://localhost:8090";
-//Create an element to be placed in the HTML
-let newDiv = document.createElement("div");
+  function OpenRegister() {
+    form.style.transform = "rotateY(-180deg)";
+  }
+  function OpenLogin() {
+    form.style.transform = "rotateY(0deg)";
+  }
 
-let newPokemonClass = document.getElementsByClassName("pokemon")[0];
-let newLogin = document.getElementById("new-login");
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i <ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
 
-//create post request
-submitButton.addEventListener('click', post);
-
-function post() {
+function login(){
     let email = document.getElementById('email').value;
     let password = document.getElementById('password').value;
 
-    console.log(email, password);
-
-    let loginInfo = {
+    let loginObj = {
         email,
         password
     }
 
-    let apiUrl = `/api/login`;
-
-    fetch(apiUrl, {
+    fetch('http://localhost:7070/login', {
         method: 'POST',
-        headers: {
-            'Content-Type': "application/json"
-        },
-        body: JSON.stringify(loginInfo)
+        body: JSON.stringify(loginObj)
     })
-        .then((res) => res.json())
-        .then((data) => console.log(data));
-}
+    .then((res) => {
+        console.log(res.headers.get('id'));
+        console.log(res.headers.get("Authorization"));
+        if(res.headers.get('id')==null){
+            alert("Error, incorrect email or password");
+        }
 
-    
+        //This is how we would save the cookies on the browser
+        document.cookie = `id=${res.headers.get('id')};`;
+        document.cookie = `authorization=${res.headers.get('Authorization')};`;
+        //setMessage();
+        console.log(res);
+        if(res.headers.get("Authorization")=="MANAGER"){
+            window.location.href="/reimbursement.html";
+        } else {
+            window.location.href="/user.html";
+        }
+    });
+    event.preventDefault();
+}
+let loginBtn = document.getElementById('submitButton').addEventListener('click', login);
+
+
+function register(){
+    let email = document.getElementById('registerEmail').value;
+    let password = document.getElementById('registerPassword').value;
+    let firstName = document.getElementById('firstName').value;
+    let lastName = document.getElementById('lastName').value;
+
+    let registerObj = {
+        "f_name":firstName,
+        "l_name":lastName,
+        "email":email,
+        "password":password
+    }
+
+    fetch('http://localhost:7070/register', {
+        method: 'POST',
+        body: JSON.stringify(registerObj)
+    })
+    .then((res) => {
+        console.log(res);
+        if(res.status==200){
+            alert("Account was created for " + registerObj.f_name);
+            window.location.href="/Login.html";
+        } else {
+            alert("Account could not be created");
+        }
+    })
+    .catch((error) => {
+        alert("Account could not be created");
+    });
+    event.preventDefault();
+}
+let registerBtn = document.getElementById('registerBtn').addEventListener('click', register);
+
+

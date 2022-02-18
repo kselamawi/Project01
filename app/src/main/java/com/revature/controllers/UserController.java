@@ -31,9 +31,10 @@ public class UserController {
         String password = ctx.formParam("password");
         String firstName = ctx.formParam("firstName");
         String lastName = ctx.formParam("lastName");
+        User u = ctx.bodyAsClass(User.class);
 
         User user = new User(email, password, firstName, lastName);
-        if(userService.createUser(user)){
+        if(userService.createUser(u)){
             ctx.result("Your account has been created");
             ctx.status(200);
         } else {

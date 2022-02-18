@@ -4,12 +4,12 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reimbursemnet Management</title>
+    <title>Manager Page</title>
     <link rel="stylesheet" href="reimbursement.css"> <link>
 </head>
 <body>
   <div class="tabs">
-      <h1>View All Pending Reimbursemnets</h1>
+      <h1>View All Pending Reimbursements</h1>
       <div class="pending-list">
         <div id="PendingReimbursements">
         </div>
@@ -19,7 +19,7 @@
 </div>
 
 <div class="tabs">
-  <h1>View All Resolved Reimbursemnets</h1>
+  <h1>View All Resolved Reimbursements</h1>
   <div class="resolved-list">
     <div id="ResolvedReimbursements">
     </div>
@@ -38,9 +38,29 @@
   </div>
   <button id="approve-button">Approve</button>
   <button id="deny-button">Deny</button>
-
-
 </div>
+
+  <div class="tabs">
+      <h1>View an Employee's Reimbursements By ID</h1>
+      <div class="getReimbursementsById">
+          <form>
+              <label for="employeeID">Employee ID:</label>
+              <input type="number" name="employeeID" id="employeeID" required></input>
+          </form>
+      </div>
+      <div id="viewEmployeeReimb">
+          <button id="get-reimbursement">Get Reimbursement By ID</button>
+      </div>
+
+  </div>
+
+  <div class="tabs">
+      <h1>View All Employees</h1>
+      <div id="viewAllEmployees">
+
+      </div>
+      <button id="25">View All Employees</button>
+  </div>
 
 <script src="reimbursement.js"></script>
 
