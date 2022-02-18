@@ -42,7 +42,7 @@ public class AuthController {
         ctx.header("Access-Control-Expose-Headers", "*");
 
         if(ctx.header("Authorization")!= null){
-            if(ctx.header("Authorization").equals("EMPLOYEE")) {
+            if(ctx.header("Authorization").equals("EMPLOYEE") || ctx.header("Authorization").equals("MANAGER")) {
                 LoggingUtil.logger.info("User has Employee authorization");
                 ctx.status(200);
             } else {
