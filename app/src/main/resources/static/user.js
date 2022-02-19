@@ -1,8 +1,9 @@
  var allpending = document.getElementById('view-pending-button');
  var allresolved = document.getElementById('view-resolved-button');
  var viewAccount = document.getElementById('view-account-button');
-
-
+ var updatedAccount = document.getElementById('view updated account');
+ var createReimbursement = document.getElementById('submit-reimbursement');
+ var logout = document.getElementById('logout-button');
 
 function getCookie(cname) {
   let name = cname + "=";
@@ -20,6 +21,75 @@ function getCookie(cname) {
   return "";
 }
 
+logout.addEventListener('click', () =>{
+    fetch(apiUrl = URL + "/logout")
+    .then(res => {
+        document.cookie = 'id=;';
+        document.cookie = 'authorization=;';
+        window.location.href="/Login.html";
+    })  
+})
+
+createReimbursement.addEventListener('click', () =>{
+    const URL ='http://localhost:7070/';
+    // var viewAccountInfo = document.getElementsByClassName("viewAccountInfo");
+    var userId = getCookie("id");
+    var amount = document.getElementById('reimbAmount').value;
+    var reimbType = document.getElementById('reimbTypeList').value;
+        var createReimbObject = {
+        "amount": amount,
+        "author_id": userId,
+        "reimbursementType": reimbType
+    }
+
+    fetch(apiUrl = URL + "users/" + userId + "/reimbursements/create", {
+        method: "POST",
+        header: {
+            "Authorization": "EMPLOYEE"
+        },
+        body: JSON.stringify(createReimbObject)
+    })
+    .then((res) => {
+        res.json;
+        if(res.status==200){
+            var newElement = document.createElement("div");
+            newElement.innerHTML = "<p>Reimbursement created</p>"
+            document.getElementById("submitReimbursement").appendChild(newElement);
+            console.log("SUCCESS");
+        }
+    })
+
+})
+
+ 
+updatedAccount.addEventListener('click', () =>{
+    const URL ='http://localhost:7070/';
+    // var viewAccountInfo = document.getElementsByClassName("viewAccountInfo");
+    var userId = getCookie("id");
+    var f_name =document.getElementById("firstname").value;
+    var l_name= document.getElementById("lastname").value;
+    var email= document.getElementById("email").value;
+    var password =document.getElementById("password").value;
+    var newElement = document.createElement("p");
+
+  fetch(apiUrl = URL +"users/" +userId,{
+      method: "PUT",
+      headers:{
+        'Authorization':'EMPLOYEE'
+      },
+      body: JSON.stringify({
+          "f_name" :f_name,
+          "l_name" :l_name,
+          "email" :email,
+          "password": password
+      })
+  })
+  .then((data) => {
+  })    
+  .catch((error) => {
+  })
+
+})
 
 viewAccount.addEventListener('click', () => {
 const URL ='http://localhost:7070/';

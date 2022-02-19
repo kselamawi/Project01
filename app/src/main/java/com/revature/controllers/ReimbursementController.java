@@ -1,5 +1,7 @@
 package com.revature.controllers;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.revature.dao.ReimbursementDao;
 import com.revature.dao.ReimbursementDaoImpl;
 import com.revature.models.Reimbursement;
@@ -17,14 +19,17 @@ public class ReimbursementController {
     private ReimbursementDao reimbursementDao = new ReimbursementDaoImpl();
     private ReimbursementService reimbursementService = new ReimbursementService(reimbursementDao);
     private AuthController authController = new AuthController();
+    private ObjectMapper mapper = new ObjectMapper();
 
-    public void handleCreateReimbursement(Context ctx){
+
+    public void handleCreateReimbursement(Context ctx) throws JsonProcessingException {
         LoggingUtil.logger.info("Attempting to create a reimbursement");
-        double amount = Double.parseDouble(ctx.formParam("Amount"));
+        CreateObject lo = mapper.readValue(ctx.body(), CreateObject.class);
         int author_id = Integer.parseInt(ctx.pathParam("id"));
-        ReimbursementType reimbursementType = ReimbursementType.valueOf(ctx.formParam("ReimbursementType"));
 
-        Reimbursement reimbursement = new Reimbursement(amount, author_id, reimbursementType);
+
+        Reimbursement reimbursement = new Reimbursement(lo.amount, lo.author_id, lo.reimbursementType);
+        reimbursement.setAmount(lo.amount);
         if(reimbursementService.createReimbursement(reimbursement)){
             LoggingUtil.logger.info("User id:" + author_id + " created a reimbursement");
             ctx.result("Successfully created a reimbursement under ID: " + author_id);
@@ -162,6 +167,12 @@ public class ReimbursementController {
           ctx.status(200);
           ctx.json(resolvedReimbursemetsByUsers);}
 }
+}
+
+class CreateObject{
+    public double amount;
+    public int author_id;
+    public ReimbursementType reimbursementType;
 }
 
 

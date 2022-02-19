@@ -17,6 +17,9 @@ public class JavalinApp {
     private Javalin app = Javalin.create(config -> {config.enableCorsForAllOrigins();
         config.addStaticFiles("/static", Location.CLASSPATH);
     }).routes(() -> {
+        path("/logout", () -> {
+            get(authController::handleLogout);
+        });
         path("/login", () -> {
            post(authController::handleLogin);
         });
@@ -37,7 +40,7 @@ public class JavalinApp {
                         get(reimbursementController::handleGetResolvedByUserID );
                     });
                     path("/create", () ->{
-                        get(reimbursementController::handleCreateReimbursement);
+                        post(reimbursementController::handleCreateReimbursement);
                     });
                 });
             });
@@ -60,20 +63,6 @@ public class JavalinApp {
                 });
             });
         });
-        //Reimbursements authorization for Managers.
-//        before("/reimbursements", authController::authorizeManagerToken);
-//        before("/reimbursements/{id}", authController::authorizeManagerToken);
-//        before("/reimbursements/pending", authController::authorizeManagerToken);
-//        before("/reimbursements/resolved", authController::authorizeManagerToken);
-//        before("/reimbursements/{id}/approve", authController::authorizeManagerToken);
-//        before("/reimbursements/{id}/deny", authController::authorizeManagerToken);
-        //Users authorization for Users and Managers
-        before("/users", authController::authorizeManagerToken);
-        before("/users/{id}", authController::authorizeEmployeeToken);
-        before("/users/{id}/reimbursements", authController::authorizeEmployeeToken);
-        before("/users/{id}/reimbursements/pending", authController::authorizeEmployeeToken);
-        before("/users/{id}/reimbursements/resolved", authController::authorizeEmployeeToken);
-        before("/users/{id}/reimbursements/create", authController::authorizeEmployeeToken);
 
     });
 

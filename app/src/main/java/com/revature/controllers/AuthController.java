@@ -22,6 +22,12 @@ public class AuthController {
     private ObjectMapper mapper = new ObjectMapper();
 
 
+    public void handleLogout(Context ctx){
+        ctx.req.getSession().invalidate();
+        ctx.status(200);
+        ctx.result("User logged out");
+    }
+
     public void handleLogin(Context ctx) throws JsonProcessingException {
         LoginObject lo = mapper.readValue(ctx.body(), LoginObject.class);
 

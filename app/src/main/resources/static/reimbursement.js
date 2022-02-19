@@ -6,6 +6,8 @@
  var selectObjects = document.getElementsByClassName("not-selected");
  var getReimbByUserId = document.getElementById("get-reimbursement");
  var viewAllEmployees = document.getElementById("25");
+ var logout = document.getElementById('logout-button');
+
 
 
  approveReimb.addEventListener('click', () => {
@@ -23,6 +25,16 @@
     }, 
         body: JSON.stringify({"id": 3}),
         })
+    })
+
+
+    logout.addEventListener('click', () =>{
+        fetch(apiUrl = URL + "/logout")
+        .then(res => {
+            document.cookie = 'id=;';
+            document.cookie = 'authorization=;';
+            window.location.href="/Login.html";
+        })  
     })
 
 denyReimb.addEventListener('click', () => {

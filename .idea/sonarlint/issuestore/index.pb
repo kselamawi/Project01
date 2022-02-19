@@ -6,8 +6,6 @@ H
 app/src/log4j.properties,7\8\785ee870728c6279c23fd761ed6a7b7f5a1490b7
 S
 #.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
-n
->app/src/main/java/com/revature/controllers/AuthController.java,0\e\0eadf8c55d2b486e206d80b5d72375e32717aa80
 `
 0app/src/main/java/com/revature/util/ConUtil.java,8\9\89eaea4ab4b6c0a99a259a4d6b3caa166b338111
 U

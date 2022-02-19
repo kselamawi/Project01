@@ -47,13 +47,13 @@ function login(){
         //This is how we would save the cookies on the browser
         document.cookie = `id=${res.headers.get('id')};`;
         document.cookie = `authorization=${res.headers.get('Authorization')};`;
-        //setMessage();
-        console.log(res);
-        if(res.headers.get("Authorization")=="MANAGER"){
+        if(res.status==200){
+        if(getCookie("authorization")=="MANAGER"){
             window.location.href="/reimbursement.html";
         } else {
             window.location.href="/user.html";
         }
+      }
     });
     event.preventDefault();
 }

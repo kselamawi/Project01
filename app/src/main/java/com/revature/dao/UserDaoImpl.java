@@ -72,7 +72,7 @@ public class UserDaoImpl implements UserDao{
             ps.setString(2, user.getL_name());
             ps.setString(3, user.getPassword());
             ps.setString(4, user.getEmail());
-            ps.setInt(5,  user.getUserRole().ordinal());
+            ps.setInt(5,  0);
             ps.setInt(6, user.getId());
 
 
