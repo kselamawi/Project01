@@ -84,6 +84,9 @@ updatedAccount.addEventListener('click', () =>{
       })
   })
   .then((data) => {
+      if(data.status==200){
+          alert("Account was updated");
+      }
   })    
   .catch((error) => {
   })

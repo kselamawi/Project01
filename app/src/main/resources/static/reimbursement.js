@@ -102,7 +102,7 @@ getReimbByUserId.addEventListener('click', () => {
 var newElement = document.createElement("ul");
 var pendingList = document.getElementsByClassName("pending-list");
 
-fetch (apiUrl = url + "reimbursements/pending",{
+fetch (apiUrl = url + "/reimbursements/pending",{
     method:"GET",
     headers : {
     'Authorization':'MANAGER',
