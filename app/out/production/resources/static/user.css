@@ -1,24 +1,18 @@
-body{
-   background-color: #c0c0c0;
+body{ 
+    background-color: #c0c0c0;
 }
 button{
-    width: 220px;
+    width: 180px;
     height: 50px;
     transition-duration:1s;
-    background: rgb(127, 189, 219);
+    background:rgb(127, 189, 219);
     color: black;
     font-weight: 700;
     border-radius: 40px;
-    padding: 0 10px;
     box-sizing: border-box;
     margin: 20px 0 10px;
     box-sizing: border-box;
     font-size: 16px;
-}
-.tabs span{
-    width: 200px;
-    height: 55px;
-    margin-left: 30px;
 }
 
 button:hover{
@@ -28,7 +22,7 @@ button:hover{
 }
 h2{
 
-    margin: 2em 2 2em 2;
+    margin: 2em 2 0.5em 2;
 	color: #343434;
 	font-weight: 700;
 	font-family: 'Ultra', sans-serif;
@@ -67,10 +61,7 @@ label{
     cursor: pointer;
 }
 .tabs {
-    padding-left: 70px;
+    padding-left: 65px;
 
-}
-fa{
-    color: red;
 }
 

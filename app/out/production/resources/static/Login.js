@@ -1,5 +1,6 @@
 // login function
   var form = document.getElementById("form");
+  const url = "http://34.138.63.74:7070";
 
   function OpenRegister() {
     form.style.transform = "rotateY(-180deg)";
@@ -33,7 +34,7 @@ function login(){
         password
     }
 
-    fetch('http://localhost:7070/login', {
+    fetch(apiUrl = url + "/login", {
         method: 'POST',
         body: JSON.stringify(loginObj)
     })
@@ -47,13 +48,13 @@ function login(){
         //This is how we would save the cookies on the browser
         document.cookie = `id=${res.headers.get('id')};`;
         document.cookie = `authorization=${res.headers.get('Authorization')};`;
-        //setMessage();
-        console.log(res);
-        if(res.headers.get("Authorization")=="MANAGER"){
+        if(res.status==200){
+        if(getCookie("authorization")=="MANAGER"){
             window.location.href="/reimbursement.html";
         } else {
             window.location.href="/user.html";
         }
+      }
     });
     event.preventDefault();
 }
@@ -73,7 +74,7 @@ function register(){
         "password":password
     }
 
-    fetch('http://localhost:7070/register', {
+    fetch(apiUrl = url + '/register', {
         method: 'POST',
         body: JSON.stringify(registerObj)
     })

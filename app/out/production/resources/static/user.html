@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="user.css"> <link>
 </head>
 <body>
-
+<h2>Welcome To User's Page</h2>
 <div class="tabs">
     <h1>View Account Information</h1>
     <div class="viewAccountInfo">
@@ -15,6 +15,25 @@
     <button id="view-account-button">View Account Information</button>
 
 </div>
+
+<div class="tabs">
+    <form action="">
+    <h1>Create a Reimbursement</h1>   
+    <div id="submitReimbursement"></div>
+    <label for="reimbAmount">Reimbursement Amount</label>
+    <input id="reimbAmount" name="reimbAmount" type="number">
+    <label for="reimbTypeList">Reimbursement Type</label>
+    <select id="reimbTypeList" name="reimbTypeList">
+        <option id="nullSelect" selected>Type</option>
+        <option id="Lodging" >LODGING</option>
+        <option id="Travel">TRAVEL</option>
+        <option id="Food">FOOD</option>
+        <option id="Other">OTHER</option>
+    </select>
+</form>
+<button id="submit-reimbursement">Submit Reimbursement</button>
+</div>
+
 
 <div class="tabs">
     <h1>View All Pending Reimbursements</h1>
@@ -34,6 +53,27 @@
     <button id="view-resolved-button">View Resolved</button>
 
 </div>
+
+
+<!--  UPdating an account -->
+<div class="tabs">
+    <form action="">
+    <h1>Update Account Info</h1>   
+    <div class="Account Info"></div>
+    <input type="text"  id="firstname" placeholder="enter your fname">
+    <input type="text" id="lastname" placeholder="enter your lname">
+    <input type="email" id="email" placeholder =" enter your email">
+    <input type="password" id="password" placeholder =" enter your password">
+</form>
+<button id="view updated account">updated account</button>
+</div>
+
+
+<div class="tabs">
+<h1>Logout</h1>
+<button id="logout-button">Logout</button>
+</div>
+
 
 <script src="user.js"></script>
 </body>
