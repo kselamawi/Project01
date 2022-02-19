@@ -4,6 +4,7 @@
  var updatedAccount = document.getElementById('view updated account');
  var createReimbursement = document.getElementById('submit-reimbursement');
  var logout = document.getElementById('logout-button');
+ const URL = "http://34.138.63.74:7070";
 
 function getCookie(cname) {
   let name = cname + "=";
@@ -31,7 +32,6 @@ logout.addEventListener('click', () =>{
 })
 
 createReimbursement.addEventListener('click', () =>{
-    const URL ='http://localhost:7070/';
     // var viewAccountInfo = document.getElementsByClassName("viewAccountInfo");
     var userId = getCookie("id");
     var amount = document.getElementById('reimbAmount').value;
@@ -63,7 +63,6 @@ createReimbursement.addEventListener('click', () =>{
 
  
 updatedAccount.addEventListener('click', () =>{
-    const URL ='http://localhost:7070/';
     // var viewAccountInfo = document.getElementsByClassName("viewAccountInfo");
     var userId = getCookie("id");
     var f_name =document.getElementById("firstname").value;
@@ -92,7 +91,6 @@ updatedAccount.addEventListener('click', () =>{
 })
 
 viewAccount.addEventListener('click', () => {
-const URL ='http://localhost:7070/';
 var newElement = document.createElement("ul");
 var viewAccountInfo = document.getElementsByClassName("viewAccountInfo");
 var userId = getCookie("id");
@@ -128,7 +126,6 @@ fetch (apiUrl = URL + "users/" + userId ,{
 
 
 allresolved.addEventListener('click', () => {
-const URL ='http://localhost:7070/';
 var newElement = document.createElement("ul");
 var pendingList = document.getElementsByClassName("resolved-list");
 var userId = getCookie("id");
@@ -162,7 +159,6 @@ fetch (apiUrl = URL + "users/" + userId + "/reimbursements/resolved",{
 
 allpending.addEventListener('click', () => {
 document.getElementById("PendingReimbursements").innerHTML="";
-const URL ='http://localhost:7070/';
 var newElement = document.createElement("ul");
 var pendingList = document.getElementsByClassName("pending-list");
 var userId = getCookie("id");

@@ -1,5 +1,6 @@
 // login function
   var form = document.getElementById("form");
+  const url = "http://34.138.63.74:7070";
 
   function OpenRegister() {
     form.style.transform = "rotateY(-180deg)";
@@ -33,7 +34,7 @@ function login(){
         password
     }
 
-    fetch('http://localhost:7070/login', {
+    fetch(apiUrl = url + "/login", {
         method: 'POST',
         body: JSON.stringify(loginObj)
     })
@@ -73,7 +74,7 @@ function register(){
         "password":password
     }
 
-    fetch('http://localhost:7070/register', {
+    fetch(apiUrl = url + '/register', {
         method: 'POST',
         body: JSON.stringify(registerObj)
     })

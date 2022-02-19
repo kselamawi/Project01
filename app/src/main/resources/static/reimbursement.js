@@ -7,13 +7,13 @@
  var getReimbByUserId = document.getElementById("get-reimbursement");
  var viewAllEmployees = document.getElementById("25");
  var logout = document.getElementById('logout-button');
+ const url = "http://34.138.63.74:7070";
 
 
 
  approveReimb.addEventListener('click', () => {
-    const URL ='http://localhost:7070/';
 
-   var apiUrl = `http://localhost:7070/reimbursements/${document.getElementById("reimbID").value}/approve`;
+   var apiUrl = url + `/reimbursements/${document.getElementById("reimbID").value}/approve`;
    console.log(apiUrl);
     // document.getElementById("cookiesomething")
     var authorID = 3;
@@ -29,7 +29,7 @@
 
 
     logout.addEventListener('click', () =>{
-        fetch(apiUrl = URL + "/logout")
+        fetch(apiUrl = url + "/logout")
         .then(res => {
             document.cookie = 'id=;';
             document.cookie = 'authorization=;';
@@ -38,9 +38,7 @@
     })
 
 denyReimb.addEventListener('click', () => {
-    const URL ='http://localhost:7070/';
-
-   var apiUrl = `http://localhost:7070/reimbursements/${document.getElementById("reimbID").value}/deny`;
+   var apiUrl = url + `/reimbursements/${document.getElementById("reimbID").value}/deny`;
    console.log(apiUrl);
     // document.getElementById("cookiesomething")
     var authorID = 3;
@@ -55,11 +53,10 @@ denyReimb.addEventListener('click', () => {
     })
 
  allrd.addEventListener('click', () => {
-    const URL ='http://localhost:7070/';
     var newElement = document.createElement("ul");
     var pendingList = document.getElementsByClassName("resolved-list");
     
-    fetch (apiUrl = URL + "reimbursements/resolved",{
+    fetch (apiUrl = url + "reimbursements/resolved",{
         method:"GET",
         headers : {
         'Authorization':'MANAGER',
@@ -80,11 +77,10 @@ denyReimb.addEventListener('click', () => {
     })
 
 getReimbByUserId.addEventListener('click', () => {
-    const URL = 'http://localhost:7070/';
     var employeeId = document.getElementById("employeeID").value;
 
     var newElement = document.createElement("li");
-    fetch (apiUrl = URL + "users/" + employeeId + "/reimbursements",{
+    fetch (apiUrl = url + "users/" + employeeId + "/reimbursements",{
     method:"GET",
     headers: {
     'Authorization':'MANAGER'
@@ -103,11 +99,10 @@ getReimbByUserId.addEventListener('click', () => {
 })
 
  allpd.addEventListener('click', () => {
-const URL ='http://localhost:7070/';
 var newElement = document.createElement("ul");
 var pendingList = document.getElementsByClassName("pending-list");
 
-fetch (apiUrl = URL + "reimbursements/pending",{
+fetch (apiUrl = url + "reimbursements/pending",{
     method:"GET",
     headers : {
     'Authorization':'MANAGER',
@@ -130,11 +125,10 @@ fetch (apiUrl = URL + "reimbursements/pending",{
 })
 
 viewAllEmployees.addEventListener('click', () => {
-    const URL ='http://localhost:7070/users';
     var newElement = document.createElement("li");
     var employeeList = document.getElementsByClassName("viewAllEmployees");
 console.log("stuff and things");
-    fetch (URL, {
+    fetch (apiUrl = url + "/users", {
         method:"GET",
         headers : {
         'Authorization':'MANAGER',
