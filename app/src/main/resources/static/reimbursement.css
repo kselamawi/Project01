@@ -1,20 +1,24 @@
 body{
-    background-image: linear-gradient(rgba(0, 0, 100, 0.8), rgba(83, 83, 155, 0.8)), url(images/bkgd.jpg);
+   background-color: #c0c0c0;
 }
 button{
-    width: 160px;
+    width: 220px;
     height: 50px;
     transition-duration:1s;
-
-    background: transparent;
+    background: rgb(127, 189, 219);
     color: black;
+    font-weight: 700;
     border-radius: 40px;
     padding: 0 10px;
-    height: 40px;
     box-sizing: border-box;
     margin: 20px 0 10px;
     box-sizing: border-box;
     font-size: 16px;
+}
+.tabs span{
+    width: 200px;
+    height: 55px;
+    margin-left: 30px;
 }
 
 button:hover{
@@ -24,14 +28,14 @@ button:hover{
 }
 h2{
 
-    margin: 2em 2 0.5em 2;
+    margin: 2em 2 2em 2;
 	color: #343434;
 	font-weight: 700;
 	font-family: 'Ultra', sans-serif;
 	font-size: 24px;
 	line-height: 60px;
 	text-transform: uppercase;
-	text-shadow: 1px 3px rgba(65, 64, 64, 0.733), 0 4px #777;
+	text-shadow: 0px 0.1px rgba(65, 64, 64, 0.733), 0 2px #777;
     margin-right: auto;
     background-color: rgb(148, 212, 245);
     text-align :center;
@@ -63,7 +67,10 @@ label{
     cursor: pointer;
 }
 .tabs {
-    padding-left: 60px;
+    padding-left: 70px;
 
+}
+fa{
+    color: red;
 }
 
