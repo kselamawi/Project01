@@ -42,7 +42,7 @@ createReimbursement.addEventListener('click', () =>{
         "reimbursementType": reimbType
     }
 
-    fetch(apiUrl = URL + "users/" + userId + "/reimbursements/create", {
+    fetch(apiUrl = URL + "/users/" + userId + "/reimbursements/create", {
         method: "POST",
         header: {
             "Authorization": "EMPLOYEE"
@@ -71,7 +71,7 @@ updatedAccount.addEventListener('click', () =>{
     var password =document.getElementById("password").value;
     var newElement = document.createElement("p");
 
-  fetch(apiUrl = URL +"users/" +userId,{
+  fetch(apiUrl = URL +"/users/" +userId,{
       method: "PUT",
       headers:{
         'Authorization':'EMPLOYEE'
@@ -96,7 +96,7 @@ var viewAccountInfo = document.getElementsByClassName("viewAccountInfo");
 var userId = getCookie("id");
 console.log(userId);
 
-fetch (apiUrl = URL + "users/" + userId ,{
+fetch (apiUrl = URL + "/users/" + userId ,{
     method:"GET",
     headers : {
     'Authorization':'EMPLOYEE',
@@ -131,7 +131,7 @@ var pendingList = document.getElementsByClassName("resolved-list");
 var userId = getCookie("id");
 console.log(userId);
 
-fetch (apiUrl = URL + "users/" + userId + "/reimbursements/resolved",{
+fetch (apiUrl = URL + "/users/" + userId + "/reimbursements/resolved",{
     method:"GET",
     headers : {
     'Authorization':'EMPLOYEE',
@@ -163,7 +163,7 @@ var newElement = document.createElement("ul");
 var pendingList = document.getElementsByClassName("pending-list");
 var userId = getCookie("id");
 console.log(userId);
-fetch (apiUrl = URL + "users/" + userId + "/reimbursements/pending",{
+fetch (apiUrl = URL + "/users/" + userId + "/reimbursements/pending",{
     method:"GET",
     headers : {
     'Authorization':'EMPLOYEE',

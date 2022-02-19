@@ -56,7 +56,7 @@ denyReimb.addEventListener('click', () => {
     var newElement = document.createElement("ul");
     var pendingList = document.getElementsByClassName("resolved-list");
     
-    fetch (apiUrl = url + "reimbursements/resolved",{
+    fetch (apiUrl = url + "/reimbursements/resolved",{
         method:"GET",
         headers : {
         'Authorization':'MANAGER',
@@ -80,7 +80,7 @@ getReimbByUserId.addEventListener('click', () => {
     var employeeId = document.getElementById("employeeID").value;
 
     var newElement = document.createElement("li");
-    fetch (apiUrl = url + "users/" + employeeId + "/reimbursements",{
+    fetch (apiUrl = url + "/users/" + employeeId + "/reimbursements",{
     method:"GET",
     headers: {
     'Authorization':'MANAGER'
